@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import "NewsViewController.h"
+#import "TracksViewController.h"
+#import "HeadquarterViewController.h"
+
 @implementation AppDelegate
 
 - (void)dealloc
@@ -27,7 +31,41 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    // Create News section view controller.
+    NewsViewController* newsViewController = [[NewsViewController alloc] initWithNibName:@"NewsView" bundle:nil];
+    newsViewController.title = @"News";
+    UINavigationController* newsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
+    newsNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    newsNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"news.png"];
+    [newsViewController release];
+    
+    // Create Tracks section view controller.
+    TracksViewController* tracksViewController = [[TracksViewController alloc] initWithNibName:@"TracksView" bundle:nil];
+    tracksViewController.title = @"Tracks";
+    UINavigationController* tracksNavigationViewController = [[UINavigationController alloc] initWithRootViewController:tracksViewController];
+    tracksNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    tracksNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"talks.png"];
+    [tracksViewController release];
+    
+    // Create Headquarter section view controller.
+    HeadquarterViewController* headquarterViewController = [[HeadquarterViewController alloc] initWithNibName:@"HeadquarterView" bundle:nil];
+    headquarterViewController.title = @"Headquarter";
+    UINavigationController* headquarterNavigationViewController = [[UINavigationController alloc] initWithRootViewController:headquarterViewController];
+    headquarterNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    headquarterNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"headquarter.png"];
+    [headquarterViewController release];
+    
+    // Create tabbed view controller with all other view controllers.
+    UITabBarController* tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:newsNavigationViewController, tracksNavigationViewController, headquarterNavigationViewController, nil];
+    tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    [newsNavigationViewController release];
+    [tracksNavigationViewController release];
+    [headquarterNavigationViewController release];
+    
+    // Set main view controller.
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -40,7 +78,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -66,11 +104,11 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
-        } 
+        }
     }
 }
 
@@ -120,7 +158,7 @@
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
          Typical reasons for an error here include:
          * The persistent store is not accessible;
@@ -142,7 +180,7 @@
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
     return _persistentStoreCoordinator;
 }

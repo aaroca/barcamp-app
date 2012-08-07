@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class NewsViewController;
+@class NewDetailViewController;
+@class TracksViewController;
+@class MeetingDetailViewController;
+@class HeadquarterViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

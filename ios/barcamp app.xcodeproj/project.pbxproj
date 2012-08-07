@@ -17,6 +17,12 @@
 		6315B3DF15D18800008D2A7C /* TracksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3DE15D18800008D2A7C /* TracksView.xib */; };
 		6315B3E115D18829008D2A7C /* MeetingDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E015D18829008D2A7C /* MeetingDetailView.xib */; };
 		6315B3E315D1883C008D2A7C /* HeadquarterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E215D1883C008D2A7C /* HeadquarterView.xib */; };
+		63A5093115D19C21004799F0 /* talks.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5092F15D19C21004799F0 /* talks.png */; };
+		63A5093215D19C21004799F0 /* talks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093015D19C21004799F0 /* talks@2x.png */; };
+		63A5093515D19D48004799F0 /* headquarter.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093315D19D48004799F0 /* headquarter.png */; };
+		63A5093615D19D48004799F0 /* headquarter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093415D19D48004799F0 /* headquarter@2x.png */; };
+		63A5093915D19EAB004799F0 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093715D19EAB004799F0 /* news.png */; };
+		63A5093A15D19EAB004799F0 /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093815D19EAB004799F0 /* news@2x.png */; };
 		63D5832B15D1852100058CDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D5832A15D1852100058CDB /* UIKit.framework */; };
 		63D5832D15D1852100058CDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D5832C15D1852100058CDB /* Foundation.framework */; };
 		63D5832F15D1852100058CDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D5832E15D1852100058CDB /* CoreGraphics.framework */; };
@@ -43,6 +49,12 @@
 		6315B3DE15D18800008D2A7C /* TracksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TracksView.xib; path = View/TracksView.xib; sourceTree = "<group>"; };
 		6315B3E015D18829008D2A7C /* MeetingDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeetingDetailView.xib; path = View/MeetingDetailView.xib; sourceTree = "<group>"; };
 		6315B3E215D1883C008D2A7C /* HeadquarterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeadquarterView.xib; path = View/HeadquarterView.xib; sourceTree = "<group>"; };
+		63A5092F15D19C21004799F0 /* talks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talks.png; path = "barcamp app/Resources/talks.png"; sourceTree = "<group>"; };
+		63A5093015D19C21004799F0 /* talks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "talks@2x.png"; path = "barcamp app/Resources/talks@2x.png"; sourceTree = "<group>"; };
+		63A5093315D19D48004799F0 /* headquarter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headquarter.png; path = "barcamp app/Resources/headquarter.png"; sourceTree = "<group>"; };
+		63A5093415D19D48004799F0 /* headquarter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "headquarter@2x.png"; path = "barcamp app/Resources/headquarter@2x.png"; sourceTree = "<group>"; };
+		63A5093715D19EAB004799F0 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = news.png; path = "barcamp app/Resources/news.png"; sourceTree = "<group>"; };
+		63A5093815D19EAB004799F0 /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news@2x.png"; path = "barcamp app/Resources/news@2x.png"; sourceTree = "<group>"; };
 		63D5832615D1852100058CDB /* barcamp app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barcamp app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D5832A15D1852100058CDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63D5832C15D1852100058CDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,6 +163,12 @@
 		6315B3CA15D186C2008D2A7C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				63A5093715D19EAB004799F0 /* news.png */,
+				63A5093815D19EAB004799F0 /* news@2x.png */,
+				63A5093315D19D48004799F0 /* headquarter.png */,
+				63A5093415D19D48004799F0 /* headquarter@2x.png */,
+				63A5092F15D19C21004799F0 /* talks.png */,
+				63A5093015D19C21004799F0 /* talks@2x.png */,
 				63D5833E15D1852100058CDB /* barcamp_app.xcdatamodeld */,
 			);
 			name = Resources;
@@ -266,6 +284,12 @@
 				6315B3DF15D18800008D2A7C /* TracksView.xib in Resources */,
 				6315B3E115D18829008D2A7C /* MeetingDetailView.xib in Resources */,
 				6315B3E315D1883C008D2A7C /* HeadquarterView.xib in Resources */,
+				63A5093115D19C21004799F0 /* talks.png in Resources */,
+				63A5093215D19C21004799F0 /* talks@2x.png in Resources */,
+				63A5093515D19D48004799F0 /* headquarter.png in Resources */,
+				63A5093615D19D48004799F0 /* headquarter@2x.png in Resources */,
+				63A5093915D19EAB004799F0 /* news.png in Resources */,
+				63A5093A15D19EAB004799F0 /* news@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
