@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6315B3CD15D18746008D2A7C /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6315B3CC15D18746008D2A7C /* NewsViewController.m */; };
+		6315B3D015D1875A008D2A7C /* NewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6315B3CF15D1875A008D2A7C /* NewDetailViewController.m */; };
+		6315B3D315D1877D008D2A7C /* TracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6315B3D215D1877D008D2A7C /* TracksViewController.m */; };
+		6315B3D615D1879F008D2A7C /* MeetingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6315B3D515D1879F008D2A7C /* MeetingDetailViewController.m */; };
+		6315B3D915D187B6008D2A7C /* HeadquarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6315B3D815D187B6008D2A7C /* HeadquarterViewController.m */; };
+		6315B3DB15D187DB008D2A7C /* NewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3DA15D187DB008D2A7C /* NewsView.xib */; };
+		6315B3DD15D187F1008D2A7C /* NewDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3DC15D187F1008D2A7C /* NewDetailView.xib */; };
+		6315B3DF15D18800008D2A7C /* TracksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3DE15D18800008D2A7C /* TracksView.xib */; };
+		6315B3E115D18829008D2A7C /* MeetingDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E015D18829008D2A7C /* MeetingDetailView.xib */; };
+		6315B3E315D1883C008D2A7C /* HeadquarterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E215D1883C008D2A7C /* HeadquarterView.xib */; };
 		63D5832B15D1852100058CDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D5832A15D1852100058CDB /* UIKit.framework */; };
 		63D5832D15D1852100058CDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D5832C15D1852100058CDB /* Foundation.framework */; };
 		63D5832F15D1852100058CDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D5832E15D1852100058CDB /* CoreGraphics.framework */; };
@@ -18,6 +28,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6315B3CB15D18746008D2A7C /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = Controller/NewsViewController.h; sourceTree = "<group>"; };
+		6315B3CC15D18746008D2A7C /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = Controller/NewsViewController.m; sourceTree = "<group>"; };
+		6315B3CE15D1875A008D2A7C /* NewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewDetailViewController.h; path = Controller/NewDetailViewController.h; sourceTree = "<group>"; };
+		6315B3CF15D1875A008D2A7C /* NewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewDetailViewController.m; path = Controller/NewDetailViewController.m; sourceTree = "<group>"; };
+		6315B3D115D1877D008D2A7C /* TracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TracksViewController.h; path = Controller/TracksViewController.h; sourceTree = "<group>"; };
+		6315B3D215D1877D008D2A7C /* TracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TracksViewController.m; path = Controller/TracksViewController.m; sourceTree = "<group>"; };
+		6315B3D415D1879F008D2A7C /* MeetingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingDetailViewController.h; path = Controller/MeetingDetailViewController.h; sourceTree = "<group>"; };
+		6315B3D515D1879F008D2A7C /* MeetingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingDetailViewController.m; path = Controller/MeetingDetailViewController.m; sourceTree = "<group>"; };
+		6315B3D715D187B6008D2A7C /* HeadquarterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeadquarterViewController.h; path = Controller/HeadquarterViewController.h; sourceTree = "<group>"; };
+		6315B3D815D187B6008D2A7C /* HeadquarterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeadquarterViewController.m; path = Controller/HeadquarterViewController.m; sourceTree = "<group>"; };
+		6315B3DA15D187DB008D2A7C /* NewsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsView.xib; path = View/NewsView.xib; sourceTree = "<group>"; };
+		6315B3DC15D187F1008D2A7C /* NewDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewDetailView.xib; path = View/NewDetailView.xib; sourceTree = "<group>"; };
+		6315B3DE15D18800008D2A7C /* TracksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TracksView.xib; path = View/TracksView.xib; sourceTree = "<group>"; };
+		6315B3E015D18829008D2A7C /* MeetingDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeetingDetailView.xib; path = View/MeetingDetailView.xib; sourceTree = "<group>"; };
+		6315B3E215D1883C008D2A7C /* HeadquarterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeadquarterView.xib; path = View/HeadquarterView.xib; sourceTree = "<group>"; };
 		63D5832615D1852100058CDB /* barcamp app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barcamp app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D5832A15D1852100058CDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63D5832C15D1852100058CDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,10 +72,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6315B3C115D1864E008D2A7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6315B3C515D18669008D2A7C /* DTO */,
+				6315B3C415D18662008D2A7C /* Domain */,
+				6315B3C315D1865B008D2A7C /* DAO */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6315B3C315D1865B008D2A7C /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		6315B3C415D18662008D2A7C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		6315B3C515D18669008D2A7C /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		6315B3C615D1866D008D2A7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6315B3DA15D187DB008D2A7C /* NewsView.xib */,
+				6315B3DC15D187F1008D2A7C /* NewDetailView.xib */,
+				6315B3DE15D18800008D2A7C /* TracksView.xib */,
+				6315B3E015D18829008D2A7C /* MeetingDetailView.xib */,
+				6315B3E215D1883C008D2A7C /* HeadquarterView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6315B3C715D18678008D2A7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6315B3C915D186B2008D2A7C /* Facade */,
+				6315B3C815D1867E008D2A7C /* Services */,
+				6315B3CB15D18746008D2A7C /* NewsViewController.h */,
+				6315B3CC15D18746008D2A7C /* NewsViewController.m */,
+				6315B3CE15D1875A008D2A7C /* NewDetailViewController.h */,
+				6315B3CF15D1875A008D2A7C /* NewDetailViewController.m */,
+				6315B3D115D1877D008D2A7C /* TracksViewController.h */,
+				6315B3D215D1877D008D2A7C /* TracksViewController.m */,
+				6315B3D415D1879F008D2A7C /* MeetingDetailViewController.h */,
+				6315B3D515D1879F008D2A7C /* MeetingDetailViewController.m */,
+				6315B3D715D187B6008D2A7C /* HeadquarterViewController.h */,
+				6315B3D815D187B6008D2A7C /* HeadquarterViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6315B3C815D1867E008D2A7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		6315B3C915D186B2008D2A7C /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Facade;
+			sourceTree = "<group>";
+		};
+		6315B3CA15D186C2008D2A7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63D5833E15D1852100058CDB /* barcamp_app.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		63D5831B15D1852100058CDB = {
 			isa = PBXGroup;
 			children = (
 				63D5833215D1852100058CDB /* barcamp app */,
+				6315B3CA15D186C2008D2A7C /* Resources */,
 				63D5832915D1852100058CDB /* Frameworks */,
 				63D5832715D1852100058CDB /* Products */,
 			);
@@ -80,7 +190,9 @@
 			children = (
 				63D5833B15D1852100058CDB /* AppDelegate.h */,
 				63D5833C15D1852100058CDB /* AppDelegate.m */,
-				63D5833E15D1852100058CDB /* barcamp_app.xcdatamodeld */,
+				6315B3C715D18678008D2A7C /* Controller */,
+				6315B3C615D1866D008D2A7C /* View */,
+				6315B3C115D1864E008D2A7C /* Model */,
 				63D5833315D1852100058CDB /* Supporting Files */,
 			);
 			path = "barcamp app";
@@ -149,6 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D5833715D1852100058CDB /* InfoPlist.strings in Resources */,
+				6315B3DB15D187DB008D2A7C /* NewsView.xib in Resources */,
+				6315B3DD15D187F1008D2A7C /* NewDetailView.xib in Resources */,
+				6315B3DF15D18800008D2A7C /* TracksView.xib in Resources */,
+				6315B3E115D18829008D2A7C /* MeetingDetailView.xib in Resources */,
+				6315B3E315D1883C008D2A7C /* HeadquarterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +279,11 @@
 				63D5833915D1852100058CDB /* main.m in Sources */,
 				63D5833D15D1852100058CDB /* AppDelegate.m in Sources */,
 				63D5834015D1852100058CDB /* barcamp_app.xcdatamodeld in Sources */,
+				6315B3CD15D18746008D2A7C /* NewsViewController.m in Sources */,
+				6315B3D015D1875A008D2A7C /* NewDetailViewController.m in Sources */,
+				6315B3D315D1877D008D2A7C /* TracksViewController.m in Sources */,
+				6315B3D615D1879F008D2A7C /* MeetingDetailViewController.m in Sources */,
+				6315B3D915D187B6008D2A7C /* HeadquarterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +389,7 @@
 				63D5834515D1852100058CDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -277,7 +400,8 @@
 				63D5833F15D1852100058CDB /* barcamp_app.xcdatamodel */,
 			);
 			currentVersion = 63D5833F15D1852100058CDB /* barcamp_app.xcdatamodel */;
-			path = barcamp_app.xcdatamodeld;
+			name = barcamp_app.xcdatamodeld;
+			path = "barcamp app/barcamp_app.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
