@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Barcamp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_home">Track</string>
+	<string name="title_activity_notices">Breaking News</string>
+	<string name="title_activity_meeting">Meeting</string>
+	<string name="title_activity_headquarter">Where and When</string>
+	
+	<string name="title_track1">Track 1</string>
+	<string name="title_track2">Track 2 </string>
+	<string name="title_track3">Track 3</string>
+</resources>
