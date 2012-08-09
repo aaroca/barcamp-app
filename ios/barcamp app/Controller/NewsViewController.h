@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsViewController : UIViewController
+#import "EGORefreshTableHeaderView.h"
+#import "CFeedFetcher.h"
+
+@class CFeedStore;
+@class CFeedEntry;
+@class CFeed;
+
+@interface NewsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate,CFeedFetcherDelegate> {
+    @private
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	BOOL _reloading;
+}
+
+@property (nonatomic, retain) NSMutableArray* rssNews;
 
 @end
