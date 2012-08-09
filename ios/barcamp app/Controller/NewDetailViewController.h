@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewDetailViewController : UIViewController
+#import "ShareableViewController.h"
+
+@class CFeedEntry;
+
+@interface NewDetailViewController : ShareableViewController<UIWebViewDelegate> {
+    @private
+    NSString* content;
+    NSString* title;
+}
+
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil content:(CFeedEntry*)entry;
 
 @end

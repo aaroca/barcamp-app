@@ -17,6 +17,7 @@
 		6315B3DF15D18800008D2A7C /* TracksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3DE15D18800008D2A7C /* TracksView.xib */; };
 		6315B3E115D18829008D2A7C /* MeetingDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E015D18829008D2A7C /* MeetingDetailView.xib */; };
 		6315B3E315D1883C008D2A7C /* HeadquarterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E215D1883C008D2A7C /* HeadquarterView.xib */; };
+		63A0CF9E15D4581B00516D6C /* ShareableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0CF9D15D4581B00516D6C /* ShareableViewController.m */; };
 		63A5093115D19C21004799F0 /* talks.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5092F15D19C21004799F0 /* talks.png */; };
 		63A5093215D19C21004799F0 /* talks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093015D19C21004799F0 /* talks@2x.png */; };
 		63A5093515D19D48004799F0 /* headquarter.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093315D19D48004799F0 /* headquarter.png */; };
@@ -136,6 +137,8 @@
 		6315B3DE15D18800008D2A7C /* TracksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TracksView.xib; path = View/TracksView.xib; sourceTree = "<group>"; };
 		6315B3E015D18829008D2A7C /* MeetingDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeetingDetailView.xib; path = View/MeetingDetailView.xib; sourceTree = "<group>"; };
 		6315B3E215D1883C008D2A7C /* HeadquarterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeadquarterView.xib; path = View/HeadquarterView.xib; sourceTree = "<group>"; };
+		63A0CF9C15D4581B00516D6C /* ShareableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareableViewController.h; path = Controller/ShareableViewController.h; sourceTree = "<group>"; };
+		63A0CF9D15D4581B00516D6C /* ShareableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareableViewController.m; path = Controller/ShareableViewController.m; sourceTree = "<group>"; };
 		63A5092F15D19C21004799F0 /* talks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talks.png; path = "barcamp app/Resources/talks.png"; sourceTree = "<group>"; };
 		63A5093015D19C21004799F0 /* talks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "talks@2x.png"; path = "barcamp app/Resources/talks@2x.png"; sourceTree = "<group>"; };
 		63A5093315D19D48004799F0 /* headquarter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headquarter.png; path = "barcamp app/Resources/headquarter.png"; sourceTree = "<group>"; };
@@ -397,6 +400,8 @@
 				6315B3D515D1879F008D2A7C /* MeetingDetailViewController.m */,
 				6315B3D715D187B6008D2A7C /* HeadquarterViewController.h */,
 				6315B3D815D187B6008D2A7C /* HeadquarterViewController.m */,
+				63A0CF9C15D4581B00516D6C /* ShareableViewController.h */,
+				63A0CF9D15D4581B00516D6C /* ShareableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -978,6 +983,7 @@
 				63A50AF115D41C69004799F0 /* CFloatTransformer.m in Sources */,
 				63A50AF215D41C69004799F0 /* CHumanDateFormatter.m in Sources */,
 				63A50AF315D41C69004799F0 /* CNumberToStringValueTransformer.m in Sources */,
+				63A0CF9E15D4581B00516D6C /* ShareableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

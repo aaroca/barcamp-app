@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Álvaro Aroca Munoz. All rights reserved.
 //
 
+#define FEED_URL @"http://feeds.feedburner.com/BarcampSpain"
+
 #import <UIKit/UIKit.h>
 
 #import "EGORefreshTableHeaderView.h"
@@ -14,6 +16,7 @@
 @class CFeedStore;
 @class CFeedEntry;
 @class CFeed;
+@class NewDetailViewController;
 
 @interface NewsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate,CFeedFetcherDelegate> {
     @private

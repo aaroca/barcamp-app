@@ -10,6 +10,7 @@
 #import "CFeedStore.h"
 #import "CFeedEntry.h"
 #import "CFeed.h"
+#import "NewDetailViewController.h"
 
 @interface NewsViewController ()
 
@@ -59,16 +60,14 @@
     
     
     // Load local feed data
-    NSString* rssURL = @"http://feeds.feedburner.com/BarcampSpain";
-    
-    CFeed* feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:rssURL] fetch:YES];
+    CFeed* feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:FEED_URL] fetch:YES];
     [self loadRSSfromFeed:feed];
     
     // Register RSS subscription for add news
     CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
     [feedFetcher setDelegate:self];
     NSError *error = nil;
-    [feedFetcher subscribeToURL:[NSURL URLWithString:rssURL] error:&error];
+    [feedFetcher subscribeToURL:[NSURL URLWithString:FEED_URL] error:&error];
 }
 
 - (void)viewDidUnload
@@ -103,6 +102,7 @@
     
     if (!rssCell) {
         rssCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"rssCell"] autorelease];
+        rssCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     CFeedEntry* entry = (CFeedEntry*) [self.rssNews objectAtIndex:indexPath.row];
@@ -115,7 +115,12 @@
 #pragma mark - Table delegate protocol implementation
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CFeedEntry* entry = (CFeedEntry*)[self.rssNews objectAtIndex:indexPath.row];
     
+    NewDetailViewController* detailViewController = [[NewDetailViewController alloc] initWithNibName:@"NewDetailView" bundle:nil content:entry];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - UIScrollViewDelegate Methods
@@ -132,7 +137,7 @@
 
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view {
     _reloading = YES;
-    [self refreshRSS];
+    [self performSelector:@selector(refreshRSS)];
 }
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view {
@@ -154,6 +159,8 @@
 #pragma mark - RSS operations implementation
 
 - (void) refreshRSS {
+    CFeed* feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:FEED_URL] fetch:YES];
+    [self loadRSSfromFeed:feed];
     _reloading = NO;
     [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:(UITableView*)self.view];
 }
@@ -168,6 +175,10 @@
     NSArray *entries = [[feed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]];
     for (CFeedEntry* entry in entries) {
         [self.rssNews addObject:entry];
+    }
+    
+    if (self.rssNews.count > 0) {
+        [(UITableView*)self.view setTableFooterView:nil];
     }
 }
 
