@@ -41,8 +41,8 @@ public class Meeting extends Entity {
 	/**
 	 * Track related
 	 */
-	@TableField(name = "track", datatype = Entity.DATATYPE_ENTITY_REFERENCE, required = true)
-	private Track track;
+	@TableField(name = "track", datatype = Entity.DATATYPE_STRING, required = true)
+	private String track;
 	
 	/**
 	 * Default constructor.
@@ -110,14 +110,14 @@ public class Meeting extends Entity {
 	/**
 	 * @return the track
 	 */
-	public Track getTrack() {
+	public String getTrack() {
 		return track;
 	}
 
 	/**
 	 * @param track the track to set
 	 */
-	public void setTrack(Track track) {
+	public void setTrack(String track) {
 		this.track = track;
 	}
 	

@@ -12,7 +12,7 @@ import com.desandroid.framework.ada.annotations.TableField;
  * @since 04/08/2012
  */
 @Table(name = "tNotice")
-public class Notice extends Entity {
+public class New extends Entity {
 
 	/**
 	 * Notice title.
@@ -41,7 +41,7 @@ public class Notice extends Entity {
 	/**
 	 * Default constructor.
 	 */
-	public Notice() {
+	public New() {
 		// TODO Auto-generated constructor stub
 	}
 

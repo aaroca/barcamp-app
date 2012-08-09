@@ -20,10 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MeetingListActivity" />
-        <activity android:name=".NoticesListActivity" />
+        <activity android:name=".NewsListActivity" />
         <activity android:name=".HeadquarterActivity" />
         <activity android:name=".MeetingActivity" />
-        <activity android:name=".NoticeActivity" />
+        <activity android:name=".NewActivity" />
     </application>
 
 </manifest>

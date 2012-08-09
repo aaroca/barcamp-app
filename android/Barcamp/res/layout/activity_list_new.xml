@@ -19,7 +19,7 @@
 		android:textColor="#FFF"
 		android:background="@android:color/transparent"/>	        
     <es.vicmonmena.barcamp.ui.components.PullToRefreshListView
-        android:id="@+id/notice_list"
+        android:id="@+id/new_list"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:padding="3dp"

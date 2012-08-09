@@ -1,0 +1,44 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:orientation="vertical"
+	android:padding="8dp"
+	android:background="#BDBDBD">
+
+    <LinearLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/customshape">
+	    <TextView
+		    android:id="@+id/new_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/title_track1"
+			android:textSize="16sp"
+			android:gravity="center"
+			android:textColor="#000"
+			android:layout_marginTop="5dp"/>
+	    <TextView
+		    android:id="@+id/new_date"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:textSize="10sp"
+			android:gravity="center"
+			android:textColor="#B7474C"
+			android:text="(12:00)"
+			android:layout_marginTop="5dp"/>
+	    
+	    <TextView
+		    android:id="@+id/new_body"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:textSize="14sp"
+			android:gravity="center"
+			android:textColor="#000"
+			android:layout_marginTop="5dp"
+			android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed mi arcu, quis hendrerit urna. Etiam blandit, enim iaculis elementum cursus, turpis tortor viverra diam, in rutrum nisi dolor non nibh. Sed vel velit a mi eleifend volutpat. Nam mattis pulvinar eros. Mauris tincidunt arcu vel orci consequat lacinia. Nam consequat ante ac quam convallis vel lacinia nunc tempus. Cras lobortis, turpis sed sollicitudin vulputate, felis tortor aliquet erat, sit amet condimentum nibh tortor sodales elit. Phasellus ut pellentesque elit. Aliquam erat volutpat. Nam non nunc diam. Pellentesque egestas quam vitae turpis aliquet ac adipiscing libero condimentum. Nulla diam magna, pretium at vulputate aliquam, auctor vitae elit. Vivamus in faucibus enim. Proin et dolor lacus. Aenean eget suscipit ipsum."/>
+    </LinearLayout>
+</LinearLayout>

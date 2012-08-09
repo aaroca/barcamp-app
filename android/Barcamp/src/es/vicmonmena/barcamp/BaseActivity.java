@@ -30,7 +30,7 @@ public class BaseActivity extends TabActivity {
 			TabHost tabHost = getTabHost(); 
 	 
 			// Notice tab
-			Intent noticeIntent = new Intent().setClass(this, NoticesListActivity.class);
+			Intent noticeIntent = new Intent().setClass(this, NewsListActivity.class);
 			TabSpec tabSpecNotice = tabHost
 			  .newTabSpec("Notices")
 			  .setIndicator("", ressources.getDrawable(R.drawable.icon_notice_config))

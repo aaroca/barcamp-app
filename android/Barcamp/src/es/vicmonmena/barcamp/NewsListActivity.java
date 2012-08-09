@@ -21,12 +21,12 @@ import es.vicmonmena.barcamp.util.Ctes;
  * @author Vicente Montaño Mena
  * @since 04/08/2012
  */
-public class NoticesListActivity extends Activity implements OnRefreshListener, OnItemClickListener {
+public class NewsListActivity extends Activity implements OnRefreshListener, OnItemClickListener {
 
 	/**
 	 * String to locate this Activity messages in catlog console.
 	 */
-	private final String TAG = NoticesListActivity.class.getSimpleName();
+	private final String TAG = NewsListActivity.class.getSimpleName();
 
 	/**
      * Item list
@@ -34,7 +34,7 @@ public class NoticesListActivity extends Activity implements OnRefreshListener, 
     private LinkedList<String> mListItems;
     
     /**
-     * Current Notice list showed.
+     * Current New list showed.
      */
     private PullToRefreshListView currentList;
         
@@ -44,10 +44,10 @@ public class NoticesListActivity extends Activity implements OnRefreshListener, 
         super.onCreate(savedInstanceState);
         
         try {
-	        setContentView(R.layout.activity_list_notice);	               
+	        setContentView(R.layout.activity_list_new);
         	        	    	
 	    	// Set a listener to be invoked when the list should be refreshed.
-	        currentList = (PullToRefreshListView) findViewById(R.id.notice_list);
+	        currentList = (PullToRefreshListView) findViewById(R.id.new_list);
 	        currentList.setOnRefreshListener(new OnRefreshListener() {
 	            @Override
 	            public void onRefresh() {
@@ -69,7 +69,7 @@ public class NoticesListActivity extends Activity implements OnRefreshListener, 
     }
     
     /**
-     * Load list Notices based on current screen showed.
+     * Load list News based on current screen showed.
      * @param listID
      * @param screenID
      * @param data
@@ -113,7 +113,7 @@ public class NoticesListActivity extends Activity implements OnRefreshListener, 
 
         @Override
         protected void onPostExecute(String[] result) {
-            mListItems.addFirst("Notice " + numItemRefreshed);
+            mListItems.addFirst("New " + numItemRefreshed);
             numItemRefreshed++;
             currentList.onRefreshComplete();
 	        super.onPostExecute(result);
@@ -131,8 +131,8 @@ public class NoticesListActivity extends Activity implements OnRefreshListener, 
 	
  	@Override
  	public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {		
- 		Intent intent = new Intent(this, NoticeActivity.class);		
-         intent.putExtra(Ctes.PARCELABLE_NOTICE_KEY, (String)adapter.getItemAtPosition(position));
+ 		Intent intent = new Intent(this, NewActivity.class);		
+ 		intent.putExtra(Ctes.PARCELABLE_NEW_KEY, (String)adapter.getItemAtPosition(position));
  		startActivity(intent);
  	}
  	
@@ -140,7 +140,7 @@ public class NoticesListActivity extends Activity implements OnRefreshListener, 
 
     private int numItemRefreshed = 1;
         
-    private String[] mStrings = { "Notice 1", "Notice 2", "Notice 3", "Notice 4", "Notice 5", "Notice 6", "Notice 7", "Notice 8", "Notice 9", "Notice 10"};
+    private String[] mStrings = { "New 1", "New 2", "New 3", "New 4", "New 5", "New 6", "New 7", "New 8", "New 9", "New 10"};
     public void showMessage(final String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }

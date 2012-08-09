@@ -7,8 +7,7 @@ import com.desandroid.framework.ada.ObjectSet;
 
 import es.vicmonmena.barcamp.domain.Author;
 import es.vicmonmena.barcamp.domain.Meeting;
-import es.vicmonmena.barcamp.domain.Notice;
-import es.vicmonmena.barcamp.domain.Track;
+import es.vicmonmena.barcamp.domain.New;
 
 
 /**
@@ -24,12 +23,7 @@ public class ApplicationDataContext extends ObjectContext {
     /**
      * Database file name.
      */
-    public static final String DATABASE_NAME = "barcamp.db";
-    
-    /**
-     * Track container for management.
-     */
-    private ObjectSet<Track> trackDAO;
+    public static final String DATABASE_NAME = "barcamp.db";    
     
     /**
      * Author container for management.
@@ -44,7 +38,7 @@ public class ApplicationDataContext extends ObjectContext {
     /**
      * Notice container for management.
      */
-    private ObjectSet<Notice> noticeDAO;
+    private ObjectSet<New> noticeDAO;
 	
     /**
 	 * Database manager.
@@ -53,14 +47,7 @@ public class ApplicationDataContext extends ObjectContext {
 	 */
 	public ApplicationDataContext(Context context) {
 		super(context, DATABASE_NAME, DATABASE_VERSION);
-	}
-
-	/**
-	 * @return the trackDAO
-	 */
-	public ObjectSet<Track> getTrackDAO() {
-		return trackDAO;
-	}
+	}	
 
 	/**
 	 * @return the authorDAO
@@ -79,7 +66,7 @@ public class ApplicationDataContext extends ObjectContext {
 	/**
 	 * @return the noticeDAO
 	 */
-	public ObjectSet<Notice> getNoticeDAO() {
+	public ObjectSet<New> getNoticeDAO() {
 		return noticeDAO;
 	}
 }
