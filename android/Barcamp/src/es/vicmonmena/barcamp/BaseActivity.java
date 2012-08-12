@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -23,35 +25,34 @@ public class BaseActivity extends TabActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		try {
+		try {			
 			setContentView(R.layout.activity_base);
-	 
 			Resources ressources = getResources(); 
 			TabHost tabHost = getTabHost(); 
 	 
 			// Notice tab
-			Intent noticeIntent = new Intent().setClass(this, NewsListActivity.class);
-			TabSpec tabSpecNotice = tabHost
-			  .newTabSpec("Notices")
-			  .setIndicator("", ressources.getDrawable(R.drawable.icon_notice_config))
-			  .setContent(noticeIntent);
+			Intent newIntent = new Intent().setClass(this, NewsListActivity.class);
+			TabSpec tabSpecNew = tabHost
+			  .newTabSpec("News")
+			  .setIndicator("News", ressources.getDrawable(R.drawable.icon_new_config))
+			  .setContent(newIntent);
 					
 			// Meeting tab
 			Intent meetingIntent = new Intent().setClass(this, MeetingListActivity.class);
 			TabSpec tabSpecMeeting = tabHost
 			  .newTabSpec("Meetings")
-			  .setIndicator("", ressources.getDrawable(R.drawable.icon_meeting_config))
+			  .setIndicator("Meetings", ressources.getDrawable(R.drawable.icon_meeting_config))
 			  .setContent(meetingIntent);
 	 		
 			// Headquarter tab
 			Intent headquarterIntent = new Intent().setClass(this, HeadquarterActivity.class);
 			TabSpec tabSpecHeadquarter = tabHost
 			  .newTabSpec("Headquarter")
-			  .setIndicator("", ressources.getDrawable(R.drawable.icon_headquarter_config))
+			  .setIndicator("Headquarter", ressources.getDrawable(R.drawable.icon_headquarter_config))
 			  .setContent(headquarterIntent);
 	 		
 			// add all tabs 
-			tabHost.addTab(tabSpecNotice);
+			tabHost.addTab(tabSpecNew);
 			tabHost.addTab(tabSpecMeeting);
 			tabHost.addTab(tabSpecHeadquarter);		
 	 
@@ -60,7 +61,7 @@ public class BaseActivity extends TabActivity {
 		} catch (Exception e) {
 			Log.e(TAG, "An exception was caught loading screen", e);
 		}
-	}
+	}	
 	
 	protected void showMessage(final String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();

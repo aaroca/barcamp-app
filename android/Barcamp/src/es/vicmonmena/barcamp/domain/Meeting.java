@@ -15,34 +15,40 @@ import com.desandroid.framework.ada.annotations.TableField;
 public class Meeting extends Entity {
 
 	/**
-	 * Title
+	 * Track title.
 	 */
 	@TableField(name = "title", datatype = Entity.DATATYPE_STRING, required = true)
 	private String title;	
 	
 	/**
-	 * Description
+	 * Track description.
 	 */
 	@TableField(name = "description", datatype = Entity.DATATYPE_STRING, required = false)
 	private String description;
 	
 	/**
-	 * Time
+	 * Track datetime.
 	 */
-	@TableField(name = "time", datatype = Entity.DATATYPE_DATE, required = true)
-	private Calendar time;
+	@TableField(name = "date", datatype = Entity.DATATYPE_DATE, required = true)
+	private Calendar date;
 	
 	/**
-	 * Author related
+	 * Author related.
 	 */
 	@TableField(name = "author", datatype = Entity.DATATYPE_ENTITY_REFERENCE, required = true)
 	private Author author;
 	
 	/**
-	 * Track related
+	 * Track related.
 	 */
 	@TableField(name = "track", datatype = Entity.DATATYPE_STRING, required = true)
 	private String track;
+	
+	/**
+	 * Track location.
+	 */
+	@TableField(name = "location", datatype = Entity.DATATYPE_STRING, required = true)
+	private String location;
 	
 	/**
 	 * Default constructor.
@@ -80,17 +86,17 @@ public class Meeting extends Entity {
 	}
 
 	/**
-	 * @return the time
+	 * @return the date
 	 */
-	public Calendar getTime() {
-		return time;
+	public Calendar getDate() {
+		return date;
 	}
 
 	/**
-	 * @param time the time to set
+	 * @param date the date to set
 	 */
-	public void setTime(Calendar time) {
-		this.time = time;
+	public void setDate(Calendar date) {
+		this.date = date;
 	}
 
 	/**
@@ -120,5 +126,18 @@ public class Meeting extends Entity {
 	public void setTrack(String track) {
 		this.track = track;
 	}
-	
+
+	/**
+	 * @return the location
+	 */
+	public String getLocation() {
+		return location;
+	}
+
+	/**
+	 * @param location the location to set
+	 */
+	public void setLocation(String location) {
+		this.location = location;
+	}	
 }

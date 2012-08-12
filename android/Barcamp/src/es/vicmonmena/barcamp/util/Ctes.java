@@ -6,6 +6,6 @@ package es.vicmonmena.barcamp.util;
  */
 public interface Ctes {
 
-	public static final String PARCELABLE_MEETING_KEY = "es.vicmonmena.barcam.meeting";
-	public static final String PARCELABLE_NEW_KEY = "es.vicmonmena.barcam.new";
+	public static final String PARCELABLE_MEETING_KEY = "es.vicmonmena.barcamp.meeting";
+	public static final String PARCELABLE_NEW_KEY = "es.vicmonmena.barcamp.new";
 }

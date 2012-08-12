@@ -12,20 +12,32 @@ import com.desandroid.framework.ada.annotations.TableField;
 @Table(name = "tAuthor")
 public class Author extends Entity {
 
-	@TableField(name = "name", datatype = Entity.DATATYPE_DATE, required = true)
+	@TableField(name = "name", datatype = Entity.DATATYPE_STRING, required = true)
 	private String name;
 	
-	@TableField(name = "description", datatype = Entity.DATATYPE_DATE, required = false)
-	private String description;
+	@TableField(name = "surname", datatype = Entity.DATATYPE_STRING, required = false)
+	private String surname;
 	
-	@TableField(name = "twitteraccount", datatype = Entity.DATATYPE_DATE, required = false)
-	private String twitterAccount;
+	@TableField(name = "picture", datatype = Entity.DATATYPE_BLOB, required = false)
+	private String picture;	
 	
-	@TableField(name = "siteuri", datatype = Entity.DATATYPE_DATE, required = false)
-	private String siteURI;
+	@TableField(name = "email", datatype = Entity.DATATYPE_STRING, required = false)
+	private String email;
 	
-	@TableField(name = "image", datatype = Entity.DATATYPE_BLOB, required = false)
-	private String image;
+	@TableField(name = "webpage", datatype = Entity.DATATYPE_STRING, required = false)
+	private String webpage;	
+	
+	@TableField(name = "twitter", datatype = Entity.DATATYPE_STRING, required = false)
+	private String twitter;
+	
+	@TableField(name = "facebook", datatype = Entity.DATATYPE_STRING, required = false)
+	private String facebook;
+	
+	@TableField(name = "linkedin", datatype = Entity.DATATYPE_STRING, required = false)
+	private String linkedin;
+	
+	@TableField(name = "about", datatype = Entity.DATATYPE_STRING, required = false)
+	private String about;
 	
 	/**
 	 * Default constructor.
@@ -49,59 +61,114 @@ public class Author extends Entity {
 	}
 
 	/**
-	 * @return the description
+	 * @return the surname
 	 */
-	public String getDescription() {
-		return description;
+	public String getSurname() {
+		return surname;
 	}
 
 	/**
-	 * @param description the description to set
+	 * @param surname the surname to set
 	 */
-	public void setDescription(String description) {
-		this.description = description;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	/**
-	 * @return the twitterAccount
+	 * @return the picture
 	 */
-	public String getTwitterAccount() {
-		return twitterAccount;
+	public String getPicture() {
+		return picture;
 	}
 
 	/**
-	 * @param twitterAccount the twitterAccount to set
+	 * @param picture the picture to set
 	 */
-	public void setTwitterAccount(String twitterAccount) {
-		this.twitterAccount = twitterAccount;
+	public void setPicture(String picture) {
+		this.picture = picture;
 	}
 
 	/**
-	 * @return the siteURI
+	 * @return the email
 	 */
-	public String getSiteURI() {
-		return siteURI;
+	public String getEmail() {
+		return email;
 	}
 
 	/**
-	 * @param siteURI the siteURI to set
+	 * @param email the email to set
 	 */
-	public void setSiteURI(String siteURI) {
-		this.siteURI = siteURI;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	/**
-	 * @return the image
+	 * @return the webpage
 	 */
-	public String getImage() {
-		return image;
+	public String getWebpage() {
+		return webpage;
 	}
 
 	/**
-	 * @param image the image to set
+	 * @param webpage the webpage to set
 	 */
-	public void setImage(String image) {
-		this.image = image;
+	public void setWebpage(String webpage) {
+		this.webpage = webpage;
 	}
-	
+
+	/**
+	 * @return the twitter
+	 */
+	public String getTwitter() {
+		return twitter;
+	}
+
+	/**
+	 * @param twitter the twitter to set
+	 */
+	public void setTwitter(String twitter) {
+		this.twitter = twitter;
+	}
+
+	/**
+	 * @return the facebook
+	 */
+	public String getFacebook() {
+		return facebook;
+	}
+
+	/**
+	 * @param facebook the facebook to set
+	 */
+	public void setFacebook(String facebook) {
+		this.facebook = facebook;
+	}
+
+	/**
+	 * @return the linkedin
+	 */
+	public String getLinkedin() {
+		return linkedin;
+	}
+
+	/**
+	 * @param linkedin the linkedin to set
+	 */
+	public void setLinkedin(String linkedin) {
+		this.linkedin = linkedin;
+	}
+
+	/**
+	 * @return the about
+	 */
+	public String getAbout() {
+		return about;
+	}
+
+	/**
+	 * @param about the about to set
+	 */
+	public void setAbout(String about) {
+		this.about = about;
+	}	
 }

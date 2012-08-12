@@ -9,6 +9,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -43,15 +44,14 @@ public class MeetingListActivity extends Activity implements OnRefreshListener, 
     /**
      * Pager for horizontal view scroll.
      */
-    private HorizontalPagerWithPageControl mPager;
-    
+    private HorizontalPagerWithPageControl mPager;    
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        try {
-	        setContentView(R.layout.activity_list_meeting);
-	        
+        try {        	        	
+        	setContentView(R.layout.activity_list_meeting);        		        	              
 	        mPager = (HorizontalPagerWithPageControl) findViewById(R.id.horizontal_pager);
 	        mPager.addPagerControl();
 	        mPager.setOnScreenSwitchListener(this);
@@ -89,6 +89,7 @@ public class MeetingListActivity extends Activity implements OnRefreshListener, 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, mListItems);
         currentList.setAdapter(adapter);
+        currentList.setOnItemClickListener(this);
     }
     
     // ---------------------------------------------------------

@@ -2,6 +2,8 @@ package es.vicmonmena.barcamp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +24,7 @@ public class NewActivity extends Activity  {
 	/**
 	 * Contains new information to show in that view.
 	 */
-	private New breakingNew;
+	private New currentNew;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,11 +42,14 @@ public class NewActivity extends Activity  {
 	 */
 	private void makeView() {		
 		// Load meeting clicked
-		Bundle b = getIntent().getExtras();
-        if (b != null && b.containsKey(Ctes.PARCELABLE_NEW_KEY)) {
+		Bundle bundle = getIntent().getExtras();
+        if (bundle != null && bundle.containsKey(Ctes.PARCELABLE_NEW_KEY)) {
+        	currentNew = bundle.getParcelable(Ctes.PARCELABLE_NEW_KEY);
+        	
         	// Load meeting title
-            ((TextView) findViewById(R.id.new_title)).setText(
-            		b.getString(Ctes.PARCELABLE_NEW_KEY));            
+            ((TextView) findViewById(R.id.new_title)).setText(currentNew.getTitle());            
+            ((TextView) findViewById(R.id.new_date)).setText(DateFormat.format("dd MM, yyyy - h:mm aa", currentNew.getDate()));
+            ((TextView) findViewById(R.id.new_body)).setText(Html.fromHtml(currentNew.getBody()));
         }
 	}
 	

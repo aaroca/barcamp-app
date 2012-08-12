@@ -5,8 +5,8 @@
 	android:layout_height="fill_parent"
 	android:layout_width="fill_parent"
 	android:orientation="vertical"
-	android:paddingLeft="8dp"
-	android:paddingRight="8dp"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
 	android:background="#C59F1D">
 	
     <es.vicmonmena.barcamp.ui.components.HorizontalPagerWithPageControl

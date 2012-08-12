@@ -5,96 +5,56 @@
 	android:layout_height="fill_parent"
 	android:layout_width="fill_parent"
 	android:orientation="vertical"
-	android:background="#E5E2E2">
-	
-    <TextView
-	    android:id="@+id/meeting_title"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:text="Título de la charla"
-		android:textSize="24sp"
-		android:gravity="center"
-		android:padding="3dp"
-		android:textColor="#FFF"
-		android:background="#50377C"
-	/>
-    
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFF"
-        android:orientation="horizontal"
-        android:padding="3dp" >
-		
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"            
-            android:src="@drawable/people_icon"
-            android:layout_weight="0.1"/>
-        
-        <TextView
-            android:id="@+id/author_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida metus ac mauris gravida venenatis."
-            android:textColor="#C59F1D"
-            android:textSize="12sp" />
-        
-    </LinearLayout>
+	android:paddingLeft="8dp"
+	android:paddingRight="8dp"
+	android:background="#BDBDBD">
 	
     <LinearLayout
-		xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:tools="http://schemas.android.com/tools"
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal"
-		android:background="#FFF"
-		android:padding="3dp">
-	
-        <TextView
-            android:id="@+id/meeting_hour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            
-            android:text="12:00"            
-            android:textSize="15sp" 
-            android:layout_weight="0.5"
-            android:textColor="#B7474C"
-            android:textStyle="bold"/>
-        
-        <TextView
-            android:id="@+id/meeting_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            
-            android:text="Aula 1"            
-            android:textSize="15sp" 
-            android:layout_weight="0.5"
-            android:textColor="#B7474C"
-            android:gravity="right"
-            android:textStyle="bold"/>
-	</LinearLayout>
-	
-    <LinearLayout
-		xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:tools="http://schemas.android.com/tools"
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:orientation="vertical"
-		android:background="#FFF"
-		android:padding="3dp">
-		
-        <TextView
-            android:id="@+id/meeting_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Maecenas sollicitudin venenatis velit, at ullamcorper nunc sollicitudin vel. Vivamus ligula augue, ornare sagittis tincidunt pellentesque, consectetur volutpat sem. Vivamus pulvinar imperdiet enim, eget adipiscing elit ultricies eget. Sed leo magna, mattis eget blandit id, malesuada et lacus. Ut bibendum, leo molestie rhoncus tempor, lectus dui pellentesque lectus, quis mattis eros est ac leo. Quisque blandit rutrum ipsum, eu blandit libero interdum et. Vivamus in enim et turpis rutrum dignissim. Aliquam malesuada viverra ligula sit amet posuere. Nunc eu nibh ut metus ornare feugiat ac nec eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-            android:textColor="#000"
-            android:textSize="12sp" />
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/customshape">
+	    <TextView
+		    android:id="@+id/meeting_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:textSize="16sp"
+			android:gravity="center"
+			android:textColor="#000"
+			android:layout_marginTop="5dp"/>
+	    <LinearLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        xmlns:tools="http://schemas.android.com/tools"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical">
+			
+	        <ImageView
+	            android:id="@+id/author_picture"
+	            android:layout_width="wrap_content"
+	            android:layout_height="100dp"            
+	            android:src="@drawable/people_icon"/>
+	        
+	        <TextView
+	            android:id="@+id/author_description"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:layout_gravity="center"
+	            android:text="twitter: @vicmonmena"
+	            android:textSize="12sp" 
+	            android:textColor="#C59F1D"/>
+	        
+	        <TextView
+	            android:id="@+id/author_about"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:layout_gravity="center"
+	            android:text="Vestibulum non nunc quam. Ut tellus enim, pharetra at imperdiet vel, euismod vitae dolor. Fusce pretium, velit eget placerat varius, odio lorem blandit libero, quis venenatis lacus est id risus. Vestibulum aliquet nisl at justo rhoncus eleifend. Integer condimentum rhoncus lectus eu feugiat. Aliquam adipiscing vulputate quam, eu fermentum purus convallis sit amet. Donec in ligula metus, ac bibendum nulla. Vestibulum mollis suscipit auctor. Suspendisse nec sapien velit, vitae vulputate tellus. Sed congue, mauris et consectetur imperdiet, nunc est pellentesque dolor, quis adipiscing eros eros non est. Nulla turpis nulla, luctus id porta sit amet, auctor in ipsum. Nullam tristique rutrum nulla, malesuada eleifend nisl ornare in. Sed mi dui, condimentum et consectetur in, adipiscing vel ipsum."
+	            android:textSize="14sp" />
+	        
+	    </LinearLayout>
         
 	</LinearLayout>
     

@@ -2,6 +2,9 @@ package es.vicmonmena.barcamp.domain;
 
 import java.util.Calendar;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.desandroid.framework.ada.Entity;
 import com.desandroid.framework.ada.annotations.Table;
 import com.desandroid.framework.ada.annotations.TableField;
@@ -11,32 +14,38 @@ import com.desandroid.framework.ada.annotations.TableField;
  * @author Vicente Montaño Mena
  * @since 04/08/2012
  */
-@Table(name = "tNotice")
-public class New extends Entity {
+@Table(name = "tNew")
+public class New extends Entity implements Parcelable {
 
 	/**
-	 * Notice title.
+	 * New title.
 	 */
-	@TableField(name = "time", datatype = Entity.DATATYPE_STRING, required = true)
+	@TableField(name = "title", datatype = Entity.DATATYPE_STRING, required = true)
 	private String title;
 	
 	/**
-	 * Notice subtitle.
+	 * New body.
 	 */
-	@TableField(name = "subtime", datatype = Entity.DATATYPE_STRING, required = true)
-	private String subtitle;
+	@TableField(name = "body", datatype = Entity.DATATYPE_STRING, required = true)
+	private String body;
 	
 	/**
-	 * Notice datetime.
+	 * New url.
 	 */
-	@TableField(name = "time", datatype = Entity.DATATYPE_DATE, required = true)
-	private Calendar dateTime;
+	@TableField(name = "url", datatype = Entity.DATATYPE_STRING, required = true)
+	private String url;
 	
 	/**
-	 * Notice content.
+	 * New datetime.
 	 */
-	@TableField(name = "time", datatype = Entity.DATATYPE_STRING, required = true)
-	private String text;
+	@TableField(name = "date", datatype = Entity.DATATYPE_DATE, required = true)
+	private Calendar date;
+		
+	/**
+	 * Is readen.
+	 */
+	@TableField(name = "read", datatype = Entity.DATATYPE_BOOLEAN, required = true)
+	private boolean read;
 	
 	/**
 	 * Default constructor.
@@ -60,44 +69,98 @@ public class New extends Entity {
 	}
 
 	/**
-	 * @return the subtitle
+	 * @return the body
 	 */
-	public String getSubtitle() {
-		return subtitle;
+	public String getBody() {
+		return body;
 	}
 
 	/**
-	 * @param subtitle the subtitle to set
+	 * @param body the body to set
 	 */
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
+	public void setBody(String body) {
+		this.body = body;
 	}
 
 	/**
-	 * @return the dateTime
+	 * @return the url
 	 */
-	public Calendar getDateTime() {
-		return dateTime;
+	public String getUrl() {
+		return url;
 	}
 
 	/**
-	 * @param dateTime the dateTime to set
+	 * @param url the url to set
 	 */
-	public void setDateTime(Calendar dateTime) {
-		this.dateTime = dateTime;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	/**
-	 * @return the text
+	 * @return the date
 	 */
-	public String getText() {
-		return text;
+	public Calendar getDate() {
+		return date;
 	}
 
 	/**
-	 * @param text the text to set
+	 * @param date the date to set
 	 */
-	public void setText(String text) {
-		this.text = text;
+	public void setDate(Calendar date) {
+		this.date = date;
 	}
+
+	/**
+	 * @return the read
+	 */
+	public boolean isRead() {
+		return read;
+	}
+
+	/**
+	 * @param read the read to set
+	 */
+	public void setRead(boolean read) {
+		this.read = read;
+	}
+
+	@Override
+	public String toString() {
+		return title;
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(title);
+		dest.writeString(body);
+		dest.writeLong(date.getTimeInMillis());
+		dest.writeString(url);		
+	}
+	
+	/**
+	 * Get new information from parcel objetc.
+	 */
+	public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+		
+		public New createFromParcel(Parcel in) {
+			New deserializedNew = new New();
+			deserializedNew.setTitle(in.readString());
+			deserializedNew.setBody(in.readString());			
+			Calendar pubDate = Calendar.getInstance();
+			pubDate.setTimeInMillis(in.readLong());
+			deserializedNew.setDate(pubDate);
+			deserializedNew.setUrl(in.readString());
+			return deserializedNew;
+		}
+	
+		public New[] newArray(int size) {
+			return new New[size];
+		}
+	};
 }

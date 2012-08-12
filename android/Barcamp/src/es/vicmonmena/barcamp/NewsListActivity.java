@@ -1,18 +1,28 @@
 package es.vicmonmena.barcamp;
 
-import java.util.Arrays;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.LinkedList;
+import java.util.List;
 
+import nl.matshofman.saxrssreader.RssFeed;
+import nl.matshofman.saxrssreader.RssItem;
+import nl.matshofman.saxrssreader.RssReader;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Toast;
+import es.vicmonmena.barcamp.domain.New;
+import es.vicmonmena.barcamp.networking.rss.BarcampRssReader;
 import es.vicmonmena.barcamp.ui.components.PullToRefreshListView;
 import es.vicmonmena.barcamp.ui.components.PullToRefreshListView.OnRefreshListener;
 import es.vicmonmena.barcamp.util.Ctes;
@@ -31,13 +41,12 @@ public class NewsListActivity extends Activity implements OnRefreshListener, OnI
 	/**
      * Item list
      */
-    private LinkedList<String> mListItems;
+    private LinkedList<New> mListItems;
     
     /**
      * Current New list showed.
      */
     private PullToRefreshListView currentList;
-        
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,83 +54,55 @@ public class NewsListActivity extends Activity implements OnRefreshListener, OnI
         
         try {
 	        setContentView(R.layout.activity_list_new);
-        	        	    	
-	    	// Set a listener to be invoked when the list should be refreshed.
-	        currentList = (PullToRefreshListView) findViewById(R.id.new_list);
-	        currentList.setOnRefreshListener(new OnRefreshListener() {
-	            @Override
-	            public void onRefresh() {
-	                // Do work to refresh the list here.
-	                new GetDataTask().execute();
-	            }
-	        });
+	        mListItems = new LinkedList<New>();
+	        ArrayAdapter<New> adapter = new ArrayAdapter<New>(
+	        		this,
+	                android.R.layout.simple_list_item_1, 
+	                mListItems);        	   
 	        
-	        // Loading list items
-	        mListItems = new LinkedList<String>();
-	        mListItems.addAll(Arrays.asList(mStrings));
-	        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-	                android.R.layout.simple_list_item_1, mListItems);
+	        currentList = (PullToRefreshListView) findViewById(R.id.new_list);	      
+	        currentList.setOnRefreshListener(this);	        
 	        currentList.setAdapter(adapter);
+	        currentList.setOnItemClickListener(this);
+	        
+	        new GetDataTask().execute();
 	        
         } catch(Exception e) {
         	Log.e(TAG, "An exception was caught loading view", e);
         }
-    }
-    
-    /**
-     * Load list News based on current screen showed.
-     * @param listID
-     * @param screenID
-     * @param data
-     */
-    private void loadList(int listID, String[] data) {
-    	
-    	mStrings = data;
-    	
-    	// Set a listener to be invoked when the list should be refreshed.
-        currentList = (PullToRefreshListView) findViewById(listID);
-        currentList.setOnRefreshListener(new OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                // Do work to refresh the list here.
-                new GetDataTask().execute();
-            }
-        });
-        
-        // Loading list items
-        mListItems = new LinkedList<String>();
-        mListItems.addAll(Arrays.asList(mStrings));
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, mListItems);
-        currentList.setAdapter(adapter);
-    }
+    }    
     
     // ---------------------------------------------------------
     
-    private class GetDataTask extends AsyncTask<Void, Void, String[]> {
+    private class GetDataTask extends AsyncTask<Void, Void, List> {
 
         @Override
-        protected String[] doInBackground(Void... params) {
-            // Simulates a background job.
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                
+        protected List<New> doInBackground(Void... params) {   
+        	List<New> news = null;
+        	try {
+        		news = BarcampRssReader.getRssNews(getString(R.string.feed_uri));
+        	} catch(Exception e) {
+            	Log.e(TAG, "An exception was caught loading view", e);
             }
-            return mStrings;
+            return news;
         }
 
         @Override
-        protected void onPostExecute(String[] result) {
-            mListItems.addFirst("New " + numItemRefreshed);
-            numItemRefreshed++;
-            currentList.onRefreshComplete();
+        protected void onPostExecute(List result) {
+            // mListItems.addFirst("New " + numItemRefreshed);
+        	if(result != null && !result.isEmpty()) {
+	        	mListItems.clear();
+	        	mListItems.addAll(result);
+	            currentList.onRefreshComplete();
+        	} else {
+        		showMessage(getString(R.string.msg_load_news_error));
+        	}
 	        super.onPostExecute(result);
         }
     }
-
+    
     // ---------- OnRefreshListener methods ----------
-
+    
     @Override
     public void onRefresh() {
         new GetDataTask().execute();
@@ -130,17 +111,19 @@ public class NewsListActivity extends Activity implements OnRefreshListener, OnI
     // ---------- List Listener -----------
 	
  	@Override
- 	public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {		
- 		Intent intent = new Intent(this, NewActivity.class);		
- 		intent.putExtra(Ctes.PARCELABLE_NEW_KEY, (String)adapter.getItemAtPosition(position));
- 		startActivity(intent);
+ 	public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+ 		if(adapter.getItemAtPosition(position) instanceof New) {
+ 			New selectedNew = (New)adapter.getItemAtPosition(position); 			
+	 		Intent intent = new Intent(this, NewActivity.class);		
+	 		intent.putExtra(Ctes.PARCELABLE_NEW_KEY, selectedNew);
+	 		startActivity(intent);
+ 		} else {
+ 			showMessage("Error al seleccionar noticia");
+ 		}
  	}
  	
 	// ---------- TO DELETE -----------
-
-    private int numItemRefreshed = 1;
-        
-    private String[] mStrings = { "New 1", "New 2", "New 3", "New 4", "New 5", "New 6", "New 7", "New 8", "New 9", "New 10"};
+    
     public void showMessage(final String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
