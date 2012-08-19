@@ -11,6 +11,7 @@ import nl.matshofman.saxrssreader.RssItem;
 import nl.matshofman.saxrssreader.RssReader;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import es.vicmonmena.barcamp.domain.New;
@@ -53,7 +55,7 @@ public class NewsListActivity extends Activity implements OnRefreshListener, OnI
         super.onCreate(savedInstanceState);
         
         try {
-	        setContentView(R.layout.activity_list_new);
+	        setContentView(R.layout.activity_list_new);	        
 	        mListItems = new LinkedList<New>();
 	        ArrayAdapter<New> adapter = new ArrayAdapter<New>(
 	        		this,

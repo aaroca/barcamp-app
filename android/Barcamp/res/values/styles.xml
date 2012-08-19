@@ -1,5 +1,47 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">	                
+    
+    <style name="fill_parent_layout">
+    	<item name="android:layout_height">fill_parent</item>
+    	<item name="android:layout_width">fill_parent</item>
+    </style>
+    
+    <style name="fill_parent_width_layout">
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="vertical_fill_parent_linearlayout" parent="fill_parent_layout">
+        <item name="android:orientation">vertical</item>
+    </style>
+    
+    <!-- Windows title style-->
+    <style name="BarcampTheme" parent="android:Theme.Light" >        
+        <item name="android:windowTitleSize">50dp</item>
+    </style>
+    
+    <!-- Tabs style -->
+    <style name="tabhost_style" parent="fill_parent_layout">
+    	<item name="android:background">#C59F1D</item>
+    </style>
 
-    <style name="AppTheme" parent="android:Theme.Light" />
-
+    <style name="tabwidget_style" parent="fill_parent_width_layout">
+    	<item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <!-- Common linearlayout with padding -->
+    <style name="linearlayout_padding" parent="vertical_fill_parent_linearlayout">
+    	<item name="android:paddingLeft">10dp</item>
+    	<item name="android:paddingRight">10dp</item>
+    </style>
+    
+    <!-- Meeting list activity -->
+    <style name="meeting_list_style" parent="fill_parent_width_layout">
+    	<item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <!-- New and meeting detailed layout -->
+    <style name="item_detailed_linearlayout" parent="linearlayout_padding">
+    	<item name="android:background">#BDBDBD</item>
+    	<item name="android:paddingTop">10dp</item>
+    </style>
 </resources>

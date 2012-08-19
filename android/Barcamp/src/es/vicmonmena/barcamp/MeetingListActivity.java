@@ -5,14 +5,15 @@ import java.util.LinkedList;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import es.vicmonmena.barcamp.ui.components.HorizontalPagerWithPageControl;
 import es.vicmonmena.barcamp.ui.components.HorizontalPagerWithPageControl.OnScreenSwitchListener;
@@ -50,8 +51,8 @@ public class MeetingListActivity extends Activity implements OnRefreshListener, 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        try {        	        	
-        	setContentView(R.layout.activity_list_meeting);        		        	              
+        try {        	
+        	setContentView(R.layout.activity_list_meeting);        	
 	        mPager = (HorizontalPagerWithPageControl) findViewById(R.id.horizontal_pager);
 	        mPager.addPagerControl();
 	        mPager.setOnScreenSwitchListener(this);

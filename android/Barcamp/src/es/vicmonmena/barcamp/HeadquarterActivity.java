@@ -1,7 +1,9 @@
 package es.vicmonmena.barcamp;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 /**
  * @author Vicente Montaño Mena

@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.Window;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -22,33 +21,39 @@ public class BaseActivity extends TabActivity {
 	 */
 	private final String TAG = HeadquarterActivity.class.getSimpleName();
 	
+	/* (non-Javadoc)
+	 * @see android.app.ActivityGroup#onCreate(android.os.Bundle)
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		try {			
+		try {						
+			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 			setContentView(R.layout.activity_base);
-			Resources ressources = getResources(); 
-			TabHost tabHost = getTabHost(); 
+			getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.titlebar);
+			
+			Resources ressources = getResources();
+			TabHost tabHost = getTabHost();
 	 
 			// Notice tab
 			Intent newIntent = new Intent().setClass(this, NewsListActivity.class);
 			TabSpec tabSpecNew = tabHost
-			  .newTabSpec("News")
-			  .setIndicator("News", ressources.getDrawable(R.drawable.icon_new_config))
+			  .newTabSpec(getString(R.string.activity_tab_news))
+			  .setIndicator(getString(R.string.activity_tab_news), ressources.getDrawable(R.drawable.icon_new_config))
 			  .setContent(newIntent);
 					
 			// Meeting tab
 			Intent meetingIntent = new Intent().setClass(this, MeetingListActivity.class);
 			TabSpec tabSpecMeeting = tabHost
-			  .newTabSpec("Meetings")
-			  .setIndicator("Meetings", ressources.getDrawable(R.drawable.icon_meeting_config))
+			  .newTabSpec(getString(R.string.activity_tab_meetings))
+			  .setIndicator(getString(R.string.activity_tab_meetings), ressources.getDrawable(R.drawable.icon_meeting_config))
 			  .setContent(meetingIntent);
 	 		
 			// Headquarter tab
 			Intent headquarterIntent = new Intent().setClass(this, HeadquarterActivity.class);
 			TabSpec tabSpecHeadquarter = tabHost
-			  .newTabSpec("Headquarter")
-			  .setIndicator("Headquarter", ressources.getDrawable(R.drawable.icon_headquarter_config))
+			  .newTabSpec(getString(R.string.activity_tab_headquarter))
+			  .setIndicator(getString(R.string.activity_tab_headquarter), ressources.getDrawable(R.drawable.icon_headquarter_config))
 			  .setContent(headquarterIntent);
 	 		
 			// add all tabs 
@@ -63,6 +68,10 @@ public class BaseActivity extends TabActivity {
 		}
 	}	
 	
+	/**
+	 * Show custom popup with text passed as argument.
+	 * @param text - text message.
+	 */
 	protected void showMessage(final String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }

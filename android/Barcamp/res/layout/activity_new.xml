@@ -1,40 +1,72 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_height="fill_parent"
-	android:layout_width="fill_parent"
-	android:orientation="vertical"
-	android:paddingLeft="10dp"
-	android:paddingRight="10dp"
-	android:paddingTop="10dp"
-	android:background="#BDBDBD">
+	style="@style/item_detailed_linearlayout">
 
+    <!-- new title -->
+    <LinearLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:background="@android:color/transparent">
+        
+        <LinearLayout 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="50dp"
+	        android:orientation="horizontal"
+	        android:background="@drawable/left_round_corner_shape"
+	        android:layout_weight="7"
+	        android:gravity="center">
+	        <TextView
+			    android:id="@+id/new_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="16sp"
+				android:textColor="#000"			
+				android:hint="@string/empty_title"/>
+       	</LinearLayout>
+        <View 
+            android:layout_height="50dp"
+		    android:layout_width="0.5dp"
+		    android:background="#BDBDBD"/>
+        <LinearLayout 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="50dp"
+	        android:orientation="horizontal"
+	        android:background="@drawable/right_round_corner_shape"
+	        android:layout_weight="3"
+	        android:gravity="center">
+	        <ImageView
+	            android:id="@+id/share_this_button"
+	            android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent"
+	        	android:background="@drawable/share_button_selector"
+			    android:onClick="shareNew"
+			    android:contentDescription="@string/app_name"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- new content -->
     <LinearLayout
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/customshape">        
-	    <TextView
-		    android:id="@+id/new_title"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"			
-			android:textSize="16sp"
-			android:gravity="center"
-			android:textColor="#000"
-			android:layout_marginTop="5dp"/>
+        android:background="@drawable/customshape"
+        android:layout_marginTop="5dp">	    
 	    <TextView
 		    android:id="@+id/new_date"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"			
-			android:textSize="12sp"
+			android:textSize="14sp"
 			android:gravity="center"
 			android:textColor="#B7474C"
-			android:hint="No date"
+			android:hint="@string/empty_date"
 			android:layout_marginTop="5dp"/>
 	    <ScrollView	
 	        android:layout_width="fill_parent"
-			android:layout_height="wrap_content" 
-			> 
+			android:layout_height="wrap_content"> 
 	    	<TextView
 			    android:id="@+id/new_body"
 				android:layout_width="fill_parent"
@@ -43,7 +75,7 @@
 				android:gravity="center"
 				android:textColor="#000"
 				android:layout_marginTop="5dp"
-				android:hint="Empty new content"/>
+				android:hint="@string/empty_content"/>
     	</ScrollView>
 		</LinearLayout>  
 </LinearLayout>

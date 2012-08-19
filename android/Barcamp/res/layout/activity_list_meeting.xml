@@ -2,11 +2,7 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_height="fill_parent"
-	android:layout_width="fill_parent"
-	android:orientation="vertical"
-	android:paddingLeft="10dp"
-	android:paddingRight="10dp"
+	style="@style/linearlayout_padding"
 	android:background="#C59F1D">
 	
     <es.vicmonmena.barcamp.ui.components.HorizontalPagerWithPageControl
@@ -32,7 +28,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_width="fill_parent"
 		        android:background="@drawable/customshape"
-		        android:textSize="15sp"/>
+		        android:textSize="12dp"/>
 	    </LinearLayout>
 	    <LinearLayout 
 	        android:layout_width="fill_parent" 
@@ -52,7 +48,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_width="fill_parent"
 		        android:background="@drawable/customshape"
-		        android:textSize="15sp"/>
+		        android:textSize="12dp"/>
 	    </LinearLayout>
 	    <LinearLayout 
 	        android:layout_width="fill_parent" 
@@ -72,7 +68,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_width="fill_parent"
 		        android:background="@drawable/customshape"
-		        android:textSize="15sp"/>
+		        android:textSize="12dp"/>
 	    </LinearLayout>
 	</es.vicmonmena.barcamp.ui.components.HorizontalPagerWithPageControl>
 </LinearLayout>
