@@ -86,6 +86,11 @@
         _delegate = delegate;
         self.type = type;
        
+        if (type == FTShareMessageControllerTypeFacebook) {
+            self.navigationItem.title = @"Facebook";
+        } else if (type == FTShareMessageControllerTypeTwitter) {
+            self.navigationItem.title = @"Twitter";
+        }
     }
     return self;
 }
@@ -116,6 +121,7 @@
     [self.navigationItem setLeftBarButtonItem:cancelBtn];
     
     [self.navigationItem.rightBarButtonItem setEnabled:(self.message.length > 0)];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
     self.message = self.message;
 }
 

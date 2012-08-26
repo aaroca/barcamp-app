@@ -101,6 +101,7 @@
                                   cancelButtonTitle:nil 
                                   destructiveButtonTitle:nil 
                                   otherButtonTitles:nil];
+    
     int index = 0;
     if (options & FTShareOptionsMail) {
         [actionSheet addButtonWithTitle:@"Mail"];
@@ -118,7 +119,7 @@
     [actionSheet addButtonWithTitle:@"Cancel"];
     [actionSheet setCancelButtonIndex:index];
     
-    [actionSheet showInView:[(UIViewController *)self.referencedController view]];
+    [actionSheet showFromTabBar:[(UIViewController *)self.referencedController tabBarController].tabBar];
     [actionSheet release];
 }
 
