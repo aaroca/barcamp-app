@@ -28,6 +28,7 @@
         
         content = [NSString stringWithFormat:@"<body bgcolor=\"#e9e0db\">%@</body>", htmlContent];
         title = entry.title;
+        self.contentToShare = [NSString stringWithFormat:@"Echadle un vistazo a, %@ en %@ @barcampes", title, entry.link];
     }
     return self;
 }

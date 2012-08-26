@@ -11,6 +11,7 @@
 #import "NewsViewController.h"
 #import "TracksViewController.h"
 #import "HeadquarterViewController.h"
+#import "FTShare.h"
 
 @implementation AppDelegate
 
@@ -26,11 +27,15 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize share = _share;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    
+    // Init social share library.
+    self.share = [[FTShare alloc] initWithReferencedController:nil];
     
     // Create News section view controller.
     NewsViewController* newsViewController = [[NewsViewController alloc] initWithNibName:@"NewsView" bundle:nil];
@@ -191,6 +196,15 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - URL Handler
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if (self.share.facebook) {
+        return [self.share.facebook handleOpenURL:url];
+    }
+    return YES;
 }
 
 @end

@@ -13,10 +13,12 @@
 @class TracksViewController;
 @class MeetingDetailViewController;
 @class HeadquarterViewController;
+@class FTShare;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) FTShare *share;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

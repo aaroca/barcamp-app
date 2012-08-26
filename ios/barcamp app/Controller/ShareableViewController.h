@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FTShare.h"
+#import "MBProgressHUD.h"
 
-@interface ShareableViewController : UIViewController {
-    @protected
-    NSString* contentToShare;
+@class AppDelegate;
+
+@interface ShareableViewController : UIViewController <FTShareTwitterDelegate, FTShareFacebookDelegate, MBProgressHUDDelegate> {
+    MBProgressHUD *HUD;
 }
+
+@property (nonatomic, retain) NSString* contentToShare;
 
 @end
