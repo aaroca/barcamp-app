@@ -26,7 +26,7 @@
         NSRange end = [htmlContent rangeOfString:@"]]>"];
         htmlContent = [NSMutableString stringWithString:[htmlContent substringToIndex:end.location]];
         
-        content = htmlContent;
+        content = [NSString stringWithFormat:@"<body bgcolor=\"#e9e0db\">%@</body>", htmlContent];
         title = entry.title;
     }
     return self;
@@ -64,7 +64,7 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     BOOL loading = YES;
 
-    if (![request.URL.description isEqualToString:@"about:blank"]) {
+    if ([request.URL.description rangeOfString:@"http"].location != NSNotFound) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString: request.URL.description]];
         loading = NO;
     }

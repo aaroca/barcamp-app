@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface HeadquarterViewController : UIViewController
+@class WhereAndWhenViewController;
+@class RegistrationViewController;
+@class StayViewController;
+
+@interface HeadquarterViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate> {
+    @private
+    NSArray* headquarterSections;
+}
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
 
 @end
