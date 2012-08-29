@@ -9,8 +9,7 @@
 #define FEED_URL @"http://feeds.feedburner.com/BarcampSpain"
 
 #import <UIKit/UIKit.h>
-
-#import "EGORefreshTableHeaderView.h"
+#import "SVPullToRefresh.h"
 #import "CFeedFetcher.h"
 
 @class CFeedStore;
@@ -18,10 +17,9 @@
 @class CFeed;
 @class NewDetailViewController;
 
-@interface NewsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate,CFeedFetcherDelegate> {
+@interface NewsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,CFeedFetcherDelegate> {
     @private
-    EGORefreshTableHeaderView *_refreshHeaderView;
-	BOOL _reloading;
+    Boolean _reloading;
 }
 
 @property (nonatomic, retain) NSMutableArray* rssNews;

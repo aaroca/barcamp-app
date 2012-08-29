@@ -45,34 +45,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    // Add pull to refresh view.
-    if (_refreshHeaderView == nil) {
-		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.view.bounds.size.height, self.view.frame.size.width, self.view.bounds.size.height)];
-		view.delegate = self;
-        view.backgroundColor = self.view.backgroundColor;
-		[self.view addSubview:view];
-		_refreshHeaderView = view;
-		[view release];
-	}
-    
-	//  update the last update date
-	[_refreshHeaderView refreshLastUpdatedDate];
-    
-    
-    // Load local feed data
+    // Load local RSS
     CFeed* feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:FEED_URL] fetch:YES];
     [self loadRSSfromFeed:feed];
     
-    // Register RSS subscription for add news
-    CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
-    [feedFetcher setDelegate:self];
-    NSError *error = nil;
-    [feedFetcher subscribeToURL:[NSURL URLWithString:FEED_URL] error:&error];
+    // Get New RSS
+    [self refreshRSS];
+    
+    // Add pull to refresh action to tableview
+    [(UITableView*)self.view addPullToRefreshWithActionHandler:^{
+        [self refreshRSS];
+    }];
 }
 
 - (void)viewDidUnload
 {
-    _refreshHeaderView = nil;
     self.rssNews = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -84,7 +71,6 @@
 }
 
 - (void)dealloc {
-    [_refreshHeaderView release];
     [self.rssNews release];
     [super dealloc];
 }
@@ -123,46 +109,28 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - UIScrollViewDelegate Methods
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
-}
-
-#pragma mark - Pull to refresh protocol implementation
-
-- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view {
-    _reloading = YES;
-    [self performSelector:@selector(refreshRSS)];
-}
-
-- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view {
-    return _reloading;
-}
-
-- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view {
-    return [NSDate date];
-}
-
 #pragma mark - RSS fetcher protocol
 
 - (void)feedFetcher:(CFeedFetcher *)inFeedFetcher didFetchFeed:(CFeed *)inFeed {
-    [self loadRSSfromFeed:inFeed];
+    if (_reloading) {
+        _reloading = NO;
+        ((UITableView*)self.view).pullToRefreshView.lastUpdatedDate = [NSDate date];
+        [((UITableView*)self.view).pullToRefreshView stopAnimating];
+    }
 
-    [(UITableView*)self.view reloadData];
+    [self loadRSSfromFeed:inFeed];
 }
 
 #pragma mark - RSS operations implementation
 
 - (void) refreshRSS {
-    CFeed* feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:FEED_URL] fetch:YES];
-    [self loadRSSfromFeed:feed];
-    _reloading = NO;
-    [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:(UITableView*)self.view];
+    _reloading = YES;
+    
+    CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
+    [feedFetcher setDelegate:self];
+    [feedFetcher setFetchInterval:0];
+    NSError *error = nil;
+    [feedFetcher subscribeToURL:[NSURL URLWithString:FEED_URL] error:&error];
 }
 
 - (void) loadRSSfromFeed:(CFeed*)feed {
@@ -180,6 +148,8 @@
     if (self.rssNews.count > 0) {
         [(UITableView*)self.view setTableFooterView:nil];
     }
+    
+    [(UITableView*)self.view reloadData];
 }
 
 @end

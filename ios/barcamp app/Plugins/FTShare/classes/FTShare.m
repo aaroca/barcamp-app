@@ -116,7 +116,7 @@
         index++;
     }
     
-    [actionSheet addButtonWithTitle:@"Cancel"];
+    [actionSheet addButtonWithTitle:@"Cancelar"];
     [actionSheet setCancelButtonIndex:index];
     
     [actionSheet showFromTabBar:[(UIViewController *)self.referencedController tabBarController].tabBar];

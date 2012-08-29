@@ -60,7 +60,7 @@
 - (void) shareContent {
     FTShare *share = [self shareInstance];
     
-    [share showActionSheetWithtitle:@"Compartir con" andOptions:FTShareOptionsFacebook|FTShareOptionsTwitter];
+    [share showActionSheetWithtitle:@"Compartir en" andOptions:FTShareOptionsFacebook|FTShareOptionsTwitter];
 }
 
 - (void) sharingContent {

@@ -39,7 +39,7 @@
     
     // Create News section view controller.
     NewsViewController* newsViewController = [[NewsViewController alloc] initWithNibName:@"NewsView" bundle:nil];
-    newsViewController.title = @"News";
+    newsViewController.title = @"Noticias";
     UINavigationController* newsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
     newsNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
     newsNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"news.png"];
@@ -47,7 +47,7 @@
     
     // Create Tracks section view controller.
     TracksViewController* tracksViewController = [[TracksViewController alloc] initWithNibName:@"TracksView" bundle:nil];
-    tracksViewController.title = @"Tracks";
+    tracksViewController.title = @"Ponencias";
     UINavigationController* tracksNavigationViewController = [[UINavigationController alloc] initWithRootViewController:tracksViewController];
     tracksNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
     tracksNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"talks.png"];
