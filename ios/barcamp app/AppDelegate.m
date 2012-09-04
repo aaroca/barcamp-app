@@ -41,7 +41,7 @@
     NewsViewController* newsViewController = [[NewsViewController alloc] initWithNibName:@"NewsView" bundle:nil];
     newsViewController.title = @"Noticias";
     UINavigationController* newsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
-    newsNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    newsNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.208 green:0.427 blue:0.639 alpha:1] /*#356da3*/;
     newsNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"news.png"];
     [newsViewController release];
     
@@ -49,7 +49,7 @@
     TracksViewController* tracksViewController = [[TracksViewController alloc] initWithNibName:@"TracksView" bundle:nil];
     tracksViewController.title = @"Ponencias";
     UINavigationController* tracksNavigationViewController = [[UINavigationController alloc] initWithRootViewController:tracksViewController];
-    tracksNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    tracksNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.208 green:0.427 blue:0.639 alpha:1] /*#356da3*/;
     tracksNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"talks.png"];
     [tracksViewController release];
     
@@ -57,14 +57,14 @@
     HeadquarterViewController* headquarterViewController = [[HeadquarterViewController alloc] initWithNibName:@"HeadquarterView" bundle:nil];
     headquarterViewController.title = @"Headquarter";
     UINavigationController* headquarterNavigationViewController = [[UINavigationController alloc] initWithRootViewController:headquarterViewController];
-    headquarterNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    headquarterNavigationViewController.navigationBar.tintColor = [UIColor colorWithRed:0.208 green:0.427 blue:0.639 alpha:1] /*#356da3*/;
     headquarterNavigationViewController.tabBarItem.image = [UIImage imageNamed:@"headquarter.png"];
     [headquarterViewController release];
     
     // Create tabbed view controller with all other view controllers.
     UITabBarController* tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = [NSArray arrayWithObjects:newsNavigationViewController, tracksNavigationViewController, headquarterNavigationViewController, nil];
-    tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.208 green:0.427 blue:0.639 alpha:1] /*#356da3*/;
     [newsNavigationViewController release];
     [tracksNavigationViewController release];
     [headquarterNavigationViewController release];

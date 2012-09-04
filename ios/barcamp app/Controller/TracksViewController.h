@@ -10,4 +10,7 @@
 
 @interface TracksViewController : UIViewController
 
+@property(nonatomic, retain) NSArray* tracks;
+@property (retain, nonatomic) IBOutlet UIView *loadingTracksView;
+
 @end

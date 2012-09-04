@@ -64,6 +64,7 @@
 								<string key="NSFrame">{{104, 11}, {158, 21}}</string>
 								<reference key="NSSuperview" ref="1071910859"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -86,7 +87,7 @@
 								</object>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 343}, {320, 44}}</string>
+						<string key="NSFrame">{{0, 347}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="403581933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="717896676"/>
@@ -104,8 +105,8 @@
 				<reference key="NSNextKeyView" ref="1071910859"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC45MTM3MjU0OTAyIDAuODc4NDMxMzcyNSAwLjg1ODgyMzUyOTQAA</bytes>
+					<int key="NSColorSpace">3</int>
+					<bytes key="NSWhite">MC44NDYzMDE2NjMzAA</bytes>
 				</object>
 				<bool key="IBUIClipsSubviews">YES</bool>
 				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics">
@@ -114,12 +115,13 @@
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIAlwaysBounceVertical">YES</bool>
-				<int key="IBUISeparatorStyle">1</int>
+				<int key="IBUIStyle">1</int>
+				<int key="IBUISeparatorStyle">2</int>
 				<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 				<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
 				<float key="IBUIRowHeight">44</float>
-				<float key="IBUISectionHeaderHeight">22</float>
-				<float key="IBUISectionFooterHeight">22</float>
+				<float key="IBUISectionHeaderHeight">10</float>
+				<float key="IBUISectionFooterHeight">10</float>
 				<reference key="IBUITableFooterView" ref="1071910859"/>
 			</object>
 		</array>

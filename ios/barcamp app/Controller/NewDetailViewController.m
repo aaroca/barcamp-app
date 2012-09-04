@@ -26,7 +26,7 @@
         NSRange end = [htmlContent rangeOfString:@"]]>"];
         htmlContent = [NSMutableString stringWithString:[htmlContent substringToIndex:end.location]];
         
-        content = [NSString stringWithFormat:@"<body bgcolor=\"#e9e0db\">%@</body>", htmlContent];
+        content = [NSString stringWithFormat:@"<body bgcolor=\"#d8d8d8\">%@</body>", htmlContent];
         title = entry.title;
         self.contentToShare = [NSString stringWithFormat:@"Echadle un vistazo a, %@ en %@ @barcampes", title, entry.link];
     }

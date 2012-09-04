@@ -108,6 +108,8 @@
 		6315B3DF15D18800008D2A7C /* TracksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3DE15D18800008D2A7C /* TracksView.xib */; };
 		6315B3E115D18829008D2A7C /* MeetingDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E015D18829008D2A7C /* MeetingDetailView.xib */; };
 		6315B3E315D1883C008D2A7C /* HeadquarterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6315B3E215D1883C008D2A7C /* HeadquarterView.xib */; };
+		634F6EE615F610B7002C089F /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F6EE515F610B7002C089F /* MeetingsViewController.m */; };
+		634F6EE915F611D4002C089F /* MeetingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634F6EE815F611D4002C089F /* MeetingsView.xib */; };
 		63A0CF9E15D4581B00516D6C /* ShareableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0CF9D15D4581B00516D6C /* ShareableViewController.m */; };
 		63A5093115D19C21004799F0 /* talks.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5092F15D19C21004799F0 /* talks.png */; };
 		63A5093215D19C21004799F0 /* talks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093015D19C21004799F0 /* talks@2x.png */; };
@@ -201,6 +203,10 @@
 		63D5833915D1852100058CDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D5833815D1852100058CDB /* main.m */; };
 		63D5833D15D1852100058CDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D5833C15D1852100058CDB /* AppDelegate.m */; };
 		63D5834015D1852100058CDB /* barcamp_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63D5833E15D1852100058CDB /* barcamp_app.xcdatamodeld */; };
+		63DD2FCB15F53428004C9328 /* GCPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD2FCA15F53428004C9328 /* GCPagedScrollView.m */; };
+		63DD2FCF15F537CC004C9328 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD2FCE15F537CC004C9328 /* Track.m */; };
+		63DD2FD215F537E3004C9328 /* Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD2FD115F537E3004C9328 /* Meeting.m */; };
+		63DD2FD515F53953004C9328 /* XMLtoTrackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD2FD415F53953004C9328 /* XMLtoTrackService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -407,6 +413,9 @@
 		6315B3DE15D18800008D2A7C /* TracksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TracksView.xib; path = View/TracksView.xib; sourceTree = "<group>"; };
 		6315B3E015D18829008D2A7C /* MeetingDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeetingDetailView.xib; path = View/MeetingDetailView.xib; sourceTree = "<group>"; };
 		6315B3E215D1883C008D2A7C /* HeadquarterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeadquarterView.xib; path = View/HeadquarterView.xib; sourceTree = "<group>"; };
+		634F6EE415F610B7002C089F /* MeetingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetingsViewController.h; path = Controller/MeetingsViewController.h; sourceTree = "<group>"; };
+		634F6EE515F610B7002C089F /* MeetingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingsViewController.m; path = Controller/MeetingsViewController.m; sourceTree = "<group>"; };
+		634F6EE815F611D4002C089F /* MeetingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeetingsView.xib; path = View/MeetingsView.xib; sourceTree = "<group>"; };
 		63A0CF9C15D4581B00516D6C /* ShareableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareableViewController.h; path = Controller/ShareableViewController.h; sourceTree = "<group>"; };
 		63A0CF9D15D4581B00516D6C /* ShareableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareableViewController.m; path = Controller/ShareableViewController.m; sourceTree = "<group>"; };
 		63A5092F15D19C21004799F0 /* talks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talks.png; path = "barcamp app/Resources/talks.png"; sourceTree = "<group>"; };
@@ -579,6 +588,14 @@
 		63D5833B15D1852100058CDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63D5833C15D1852100058CDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		63D5833F15D1852100058CDB /* barcamp_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = barcamp_app.xcdatamodel; sourceTree = "<group>"; };
+		63DD2FC915F53428004C9328 /* GCPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPagedScrollView.h; sourceTree = "<group>"; };
+		63DD2FCA15F53428004C9328 /* GCPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPagedScrollView.m; sourceTree = "<group>"; };
+		63DD2FCD15F537CC004C9328 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Track.h; path = Model/Domain/Track.h; sourceTree = "<group>"; };
+		63DD2FCE15F537CC004C9328 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Track.m; path = Model/Domain/Track.m; sourceTree = "<group>"; };
+		63DD2FD015F537E3004C9328 /* Meeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Meeting.h; path = Model/Domain/Meeting.h; sourceTree = "<group>"; };
+		63DD2FD115F537E3004C9328 /* Meeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Meeting.m; path = Model/Domain/Meeting.m; sourceTree = "<group>"; };
+		63DD2FD315F53953004C9328 /* XMLtoTrackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLtoTrackService.h; path = Controller/Services/XMLtoTrackService.h; sourceTree = "<group>"; };
+		63DD2FD415F53953004C9328 /* XMLtoTrackService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLtoTrackService.m; path = Controller/Services/XMLtoTrackService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -925,32 +942,20 @@
 		6315B3C115D1864E008D2A7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6315B3C515D18669008D2A7C /* DTO */,
 				6315B3C415D18662008D2A7C /* Domain */,
-				6315B3C315D1865B008D2A7C /* DAO */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		6315B3C315D1865B008D2A7C /* DAO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DAO;
 			sourceTree = "<group>";
 		};
 		6315B3C415D18662008D2A7C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				63DD2FCD15F537CC004C9328 /* Track.h */,
+				63DD2FCE15F537CC004C9328 /* Track.m */,
+				63DD2FD015F537E3004C9328 /* Meeting.h */,
+				63DD2FD115F537E3004C9328 /* Meeting.m */,
 			);
 			name = Domain;
-			sourceTree = "<group>";
-		};
-		6315B3C515D18669008D2A7C /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DTO;
 			sourceTree = "<group>";
 		};
 		6315B3C615D1866D008D2A7C /* View */ = {
@@ -964,6 +969,7 @@
 				6305196115EA740C001BBDEF /* WhereAndWhenView.xib */,
 				6305196415EA7424001BBDEF /* RegistrationView.xib */,
 				6305196615EA7465001BBDEF /* StayView.xib */,
+				634F6EE815F611D4002C089F /* MeetingsView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -971,7 +977,6 @@
 		6315B3C715D18678008D2A7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6315B3C915D186B2008D2A7C /* Facade */,
 				6315B3C815D1867E008D2A7C /* Services */,
 				6315B3CB15D18746008D2A7C /* NewsViewController.h */,
 				6315B3CC15D18746008D2A7C /* NewsViewController.m */,
@@ -991,6 +996,8 @@
 				6305196C15EA74AD001BBDEF /* RegistrationViewController.m */,
 				6305196E15EA74BB001BBDEF /* StayViewController.h */,
 				6305196F15EA74BB001BBDEF /* StayViewController.m */,
+				634F6EE415F610B7002C089F /* MeetingsViewController.h */,
+				634F6EE515F610B7002C089F /* MeetingsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -998,15 +1005,10 @@
 		6315B3C815D1867E008D2A7C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				63DD2FD315F53953004C9328 /* XMLtoTrackService.h */,
+				63DD2FD415F53953004C9328 /* XMLtoTrackService.m */,
 			);
 			name = Services;
-			sourceTree = "<group>";
-		};
-		6315B3C915D186B2008D2A7C /* Facade */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Facade;
 			sourceTree = "<group>";
 		};
 		6315B3CA15D186C2008D2A7C /* Resources */ = {
@@ -1027,6 +1029,7 @@
 		63A5093B15D41620004799F0 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				63DD2FC815F53428004C9328 /* GCPagedScrollView */,
 				6307001815EE9D340045D7CB /* SVPullToRefresh */,
 				63051AA215EAAE53001BBDEF /* MBProgressHUD */,
 				6305199515EAA16E001BBDEF /* FTShare */,
@@ -1376,6 +1379,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		63DD2FC815F53428004C9328 /* GCPagedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				63DD2FC915F53428004C9328 /* GCPagedScrollView.h */,
+				63DD2FCA15F53428004C9328 /* GCPagedScrollView.m */,
+			);
+			name = GCPagedScrollView;
+			path = "barcamp app/Plugins/GCPagedScrollView";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1461,6 +1474,7 @@
 				63051A9915EAA4A7001BBDEF /* icono.png in Resources */,
 				63051A9F15EAA5E8001BBDEF /* Default@2x.png in Resources */,
 				63051AA115EAA5EB001BBDEF /* Default.png in Resources */,
+				634F6EE915F611D4002C089F /* MeetingsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1619,6 +1633,11 @@
 				63051A8715EAA16E001BBDEF /* SA_OAuthTwitterEngine.m in Sources */,
 				63051AA515EAAE53001BBDEF /* MBProgressHUD.m in Sources */,
 				6307001B15EE9D340045D7CB /* SVPullToRefresh.m in Sources */,
+				63DD2FCB15F53428004C9328 /* GCPagedScrollView.m in Sources */,
+				63DD2FCF15F537CC004C9328 /* Track.m in Sources */,
+				63DD2FD215F537E3004C9328 /* Meeting.m in Sources */,
+				63DD2FD515F53953004C9328 /* XMLtoTrackService.m in Sources */,
+				634F6EE615F610B7002C089F /* MeetingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
