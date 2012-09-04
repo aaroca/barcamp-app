@@ -10,7 +10,7 @@
 #import <QuartzCore/CATransaction.h>
 
 NSString * const GCPagedScrollViewContentOffsetKey = @"contentOffset";
-const CGFloat GCPagedScrollViewPageControlHeight = 36.0;
+const CGFloat GCPagedScrollViewPageControlHeight = 15.0;
 
 @interface GCPagedScrollView ()
 

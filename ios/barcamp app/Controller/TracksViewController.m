@@ -8,10 +8,17 @@
 
 #import "TracksViewController.h"
 #import "XMLtoTrackService.h"
+#import "GCPagedScrollView.h"
+#import "Track.h"
+#import "MeetingsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface TracksViewController ()
 
+@property (nonatomic, readonly) GCPagedScrollView* scrollView;
+
 - (NSArray*) getTracks;
+- (void) renderPages;
 
 @end
 
@@ -29,6 +36,17 @@
     return self;
 }
 
+- (void)loadView {
+    [super loadView];
+    
+    GCPagedScrollView* scrollView = [[GCPagedScrollView alloc] initWithFrame:self.view.frame];
+    scrollView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    scrollView.backgroundColor = [UIColor colorWithRed:0.847 green:0.847 blue:0.847 alpha:1] /*#d8d8d8*/;
+    
+    self.view = scrollView;
+    [scrollView release];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,6 +61,9 @@
     
     // Hide loading tracks view.
     self.loadingTracksView.hidden = YES;
+    
+    // Render each track page.
+    [self renderPages];
 }
 
 - (void)viewDidUnload
@@ -60,6 +81,15 @@
 - (void)dealloc {
     [_loadingTracksView release];
     [super dealloc];
+}
+
+#pragma mark - Rendering pages
+
+- (void) renderPages {
+    for (Track* track in self.tracks) {
+        MeetingsViewController* meetingsViewController = [[MeetingsViewController alloc] initWithNibName:@"MeetingsView" bundle:nil andMeetings:track.meetings];
+        [(GCPagedScrollView*)self.view addContentSubview:meetingsViewController.view];
+    }
 }
 
 #pragma mark - Tracks operations
