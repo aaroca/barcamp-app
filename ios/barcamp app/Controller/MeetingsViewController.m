@@ -8,6 +8,7 @@
 
 #import "MeetingsViewController.h"
 #import "Meeting.h"
+#import "MeetingDetailViewController.h"
 
 @interface MeetingsViewController ()
 
@@ -16,6 +17,7 @@
 @implementation MeetingsViewController
 
 @synthesize meetings = _meetings;
+@synthesize tracksViewController = _tracksViewController;
 @synthesize meetingsTableView = _meetingsTableView;
 
 
@@ -87,6 +89,10 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MeetingDetailViewController* meetingDetailViewController= [[MeetingDetailViewController alloc] initWithNibName:@"MeetingDetailView" bundle:nil withMeetingData:[self.meetings objectAtIndex:indexPath.row]];
+    [self.tracksViewController.navigationController pushViewController:meetingDetailViewController animated:YES];
+    [meetingDetailViewController release];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

@@ -80,6 +80,7 @@
     NSInteger page = 1;
     for (Track* track in self.tracks) {
         MeetingsViewController* meetingsViewController = [[MeetingsViewController alloc] initWithNibName:@"MeetingsView" bundle:nil inTrack:page withMeetings:track.meetings];
+        meetingsViewController.tracksViewController = self;
         [(GCPagedScrollView*)self.view addContentSubview:meetingsViewController.view];
         page++;
     }

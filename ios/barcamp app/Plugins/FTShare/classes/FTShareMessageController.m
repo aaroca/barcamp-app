@@ -121,7 +121,7 @@
     [self.navigationItem setLeftBarButtonItem:cancelBtn];
     
     [self.navigationItem.rightBarButtonItem setEnabled:(self.message.length > 0)];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.718 green:0.278 blue:0.298 alpha:1] /*#b7474c*/;
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.208 green:0.427 blue:0.639 alpha:1] /*#356da3*/;
     self.message = self.message;
 }
 

@@ -15,6 +15,7 @@
 }
 
 @property(nonatomic, retain) NSArray* meetings;
+@property(nonatomic, assign) UIViewController* tracksViewController;
 @property (retain, nonatomic) IBOutlet UITableView *meetingsTableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inTrack:(NSInteger)trackNumber withMeetings:(NSArray*)meetings;

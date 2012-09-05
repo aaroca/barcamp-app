@@ -111,6 +111,12 @@
 		634F6EE615F610B7002C089F /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F6EE515F610B7002C089F /* MeetingsViewController.m */; };
 		634F6EE915F611D4002C089F /* MeetingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634F6EE815F611D4002C089F /* MeetingsView.xib */; };
 		6361AA1115F64AA900A91159 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1015F64AA900A91159 /* gradient.png */; };
+		6361AA1515F7C12100A91159 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1315F7C12100A91159 /* twitter.png */; };
+		6361AA1615F7C12100A91159 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1415F7C12100A91159 /* twitter@2x.png */; };
+		6361AA1915F7C2B400A91159 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1715F7C2B400A91159 /* web.png */; };
+		6361AA1A15F7C2B400A91159 /* web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1815F7C2B400A91159 /* web@2x.png */; };
+		6361AA1D15F7CB0300A91159 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1B15F7CB0300A91159 /* profile.png */; };
+		6361AA1E15F7CB0300A91159 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6361AA1C15F7CB0300A91159 /* profile@2x.png */; };
 		63A0CF9E15D4581B00516D6C /* ShareableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0CF9D15D4581B00516D6C /* ShareableViewController.m */; };
 		63A5093115D19C21004799F0 /* talks.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5092F15D19C21004799F0 /* talks.png */; };
 		63A5093215D19C21004799F0 /* talks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A5093015D19C21004799F0 /* talks@2x.png */; };
@@ -418,6 +424,12 @@
 		634F6EE515F610B7002C089F /* MeetingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingsViewController.m; path = Controller/MeetingsViewController.m; sourceTree = "<group>"; };
 		634F6EE815F611D4002C089F /* MeetingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeetingsView.xib; path = View/MeetingsView.xib; sourceTree = "<group>"; };
 		6361AA1015F64AA900A91159 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gradient.png; path = "barcamp app/Resources/gradient.png"; sourceTree = "<group>"; };
+		6361AA1315F7C12100A91159 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = "barcamp app/Resources/twitter.png"; sourceTree = "<group>"; };
+		6361AA1415F7C12100A91159 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "barcamp app/Resources/twitter@2x.png"; sourceTree = "<group>"; };
+		6361AA1715F7C2B400A91159 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = web.png; path = "barcamp app/Resources/web.png"; sourceTree = "<group>"; };
+		6361AA1815F7C2B400A91159 /* web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "web@2x.png"; path = "barcamp app/Resources/web@2x.png"; sourceTree = "<group>"; };
+		6361AA1B15F7CB0300A91159 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = "barcamp app/Resources/profile.png"; sourceTree = "<group>"; };
+		6361AA1C15F7CB0300A91159 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "barcamp app/Resources/profile@2x.png"; sourceTree = "<group>"; };
 		63A0CF9C15D4581B00516D6C /* ShareableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareableViewController.h; path = Controller/ShareableViewController.h; sourceTree = "<group>"; };
 		63A0CF9D15D4581B00516D6C /* ShareableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareableViewController.m; path = Controller/ShareableViewController.m; sourceTree = "<group>"; };
 		63A5092F15D19C21004799F0 /* talks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talks.png; path = "barcamp app/Resources/talks.png"; sourceTree = "<group>"; };
@@ -1024,6 +1036,12 @@
 				63A5093415D19D48004799F0 /* headquarter@2x.png */,
 				63A5092F15D19C21004799F0 /* talks.png */,
 				63A5093015D19C21004799F0 /* talks@2x.png */,
+				6361AA1315F7C12100A91159 /* twitter.png */,
+				6361AA1415F7C12100A91159 /* twitter@2x.png */,
+				6361AA1715F7C2B400A91159 /* web.png */,
+				6361AA1815F7C2B400A91159 /* web@2x.png */,
+				6361AA1B15F7CB0300A91159 /* profile.png */,
+				6361AA1C15F7CB0300A91159 /* profile@2x.png */,
 				63D5833E15D1852100058CDB /* barcamp_app.xcdatamodeld */,
 			);
 			name = Resources;
@@ -1479,6 +1497,12 @@
 				63051AA115EAA5EB001BBDEF /* Default.png in Resources */,
 				634F6EE915F611D4002C089F /* MeetingsView.xib in Resources */,
 				6361AA1115F64AA900A91159 /* gradient.png in Resources */,
+				6361AA1515F7C12100A91159 /* twitter.png in Resources */,
+				6361AA1615F7C12100A91159 /* twitter@2x.png in Resources */,
+				6361AA1915F7C2B400A91159 /* web.png in Resources */,
+				6361AA1A15F7C2B400A91159 /* web@2x.png in Resources */,
+				6361AA1D15F7CB0300A91159 /* profile.png in Resources */,
+				6361AA1E15F7CB0300A91159 /* profile@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShareableViewController.h"
 
-@interface MeetingDetailViewController : UIViewController
+@class Meeting;
+
+@interface MeetingDetailViewController : ShareableViewController {
+    Meeting* meeting;
+}
+@property (retain, nonatomic) IBOutlet UIImageView *ponenteImage;
+@property (retain, nonatomic) IBOutlet UIButton *ponenteTwitter;
+@property (retain, nonatomic) IBOutlet UIButton *ponenteWeb;
+@property (retain, nonatomic) IBOutlet UITextView *ponenteNombre;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *loadingPonenteImage;
+@property (retain, nonatomic) IBOutlet UITextView *ponenciaDescripcion;
+@property (retain, nonatomic) IBOutlet UILabel *lugarHoraPonencia;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withMeetingData:(Meeting*)data;
+- (IBAction)openTwitterAccount:(id)sender;
+- (IBAction)openWebsite:(id)sender;
 
 @end
