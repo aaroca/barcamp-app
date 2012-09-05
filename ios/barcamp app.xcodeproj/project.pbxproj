@@ -966,12 +966,12 @@
 				6315B3DA15D187DB008D2A7C /* NewsView.xib */,
 				6315B3DC15D187F1008D2A7C /* NewDetailView.xib */,
 				6315B3DE15D18800008D2A7C /* TracksView.xib */,
+				634F6EE815F611D4002C089F /* MeetingsView.xib */,
 				6315B3E015D18829008D2A7C /* MeetingDetailView.xib */,
 				6315B3E215D1883C008D2A7C /* HeadquarterView.xib */,
 				6305196115EA740C001BBDEF /* WhereAndWhenView.xib */,
 				6305196415EA7424001BBDEF /* RegistrationView.xib */,
 				6305196615EA7465001BBDEF /* StayView.xib */,
-				634F6EE815F611D4002C089F /* MeetingsView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -986,6 +986,8 @@
 				6315B3CF15D1875A008D2A7C /* NewDetailViewController.m */,
 				6315B3D115D1877D008D2A7C /* TracksViewController.h */,
 				6315B3D215D1877D008D2A7C /* TracksViewController.m */,
+				634F6EE415F610B7002C089F /* MeetingsViewController.h */,
+				634F6EE515F610B7002C089F /* MeetingsViewController.m */,
 				6315B3D415D1879F008D2A7C /* MeetingDetailViewController.h */,
 				6315B3D515D1879F008D2A7C /* MeetingDetailViewController.m */,
 				6315B3D715D187B6008D2A7C /* HeadquarterViewController.h */,
@@ -998,8 +1000,6 @@
 				6305196C15EA74AD001BBDEF /* RegistrationViewController.m */,
 				6305196E15EA74BB001BBDEF /* StayViewController.h */,
 				6305196F15EA74BB001BBDEF /* StayViewController.m */,
-				634F6EE415F610B7002C089F /* MeetingsViewController.h */,
-				634F6EE515F610B7002C089F /* MeetingsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

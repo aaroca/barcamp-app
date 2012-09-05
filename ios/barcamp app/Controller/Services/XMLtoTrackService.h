@@ -10,6 +10,6 @@
 
 @interface XMLtoTrackService : NSObject
 
-+ (NSArray*) getTracksFromXML:(NSString*)xml;
++ (NSArray*) getTracksFromXML:(NSData*)data;
 
 @end

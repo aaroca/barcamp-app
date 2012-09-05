@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeetingsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@class TracksViewController;
+
+@interface MeetingsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
+    NSString* trackNumberTitle;
+}
 
 @property(nonatomic, retain) NSArray* meetings;
+@property (retain, nonatomic) IBOutlet UITableView *meetingsTableView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andMeetings:(NSArray*)meetings;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inTrack:(NSInteger)trackNumber withMeetings:(NSArray*)meetings;
 
 @end

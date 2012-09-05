@@ -13,12 +13,12 @@
 
 @implementation XMLtoTrackService
 
-+ (NSArray*) getTracksFromXML:(NSString*)xml {
++ (NSArray*) getTracksFromXML:(NSData*)data {
     NSMutableArray* tracks = [NSMutableArray array];
     
     // XML Parser
     NSError* error = nil;
-    CXMLDocument* documentRoot = [[[CXMLDocument alloc] initWithXMLString:xml options:0 error:&error] autorelease];
+    CXMLDocument* documentRoot = [[[CXMLDocument alloc] initWithData:data options:0 error:&error] autorelease];
     
     // If not error parsing XML
     if (!error) {

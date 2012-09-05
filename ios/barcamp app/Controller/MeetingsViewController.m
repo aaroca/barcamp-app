@@ -16,14 +16,16 @@
 @implementation MeetingsViewController
 
 @synthesize meetings = _meetings;
+@synthesize meetingsTableView = _meetingsTableView;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andMeetings:(NSArray*)meetings
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inTrack:(NSInteger)trackNumber withMeetings:(NSArray*)meetings
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         self.meetings = meetings;
+        trackNumberTitle = [NSString stringWithFormat:@"Track %d", trackNumber];
     }
     return self;
 }
@@ -36,6 +38,7 @@
 
 - (void)viewDidUnload
 {
+    [self setMeetingsTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -43,6 +46,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)dealloc {
+    [_meetingsTableView release];
+    [super dealloc];
 }
 
 #pragma mark - UITableViewDataSource
@@ -70,6 +78,10 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return trackNumberTitle;
 }
 
 #pragma mark - UITableViewDelegate
