@@ -106,6 +106,8 @@
 }
 
 - (void) updateTracks {
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
     // Download online xml with tracks data.
     NSData* xmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://dl.dropbox.com/u/3837140/barcamp%20app/tracks.xml"]];
     
@@ -114,6 +116,8 @@
     
     NSFileManager* manager = [[NSFileManager alloc] init];
     [manager createFileAtPath:documentDirectoryURL contents:xmlData attributes:nil];
+    
+    self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
 - (void) loadTracks {

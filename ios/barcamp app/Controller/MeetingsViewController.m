@@ -16,6 +16,7 @@
 
 @implementation MeetingsViewController
 
+@synthesize trackNumbertitle = _trackNumbertitle;
 @synthesize meetings = _meetings;
 @synthesize tracksViewController = _tracksViewController;
 @synthesize meetingsTableView = _meetingsTableView;
@@ -27,7 +28,7 @@
     if (self) {
         // Custom initialization
         self.meetings = meetings;
-        trackNumberTitle = [NSString stringWithFormat:@"Track %d", trackNumber];
+        self.trackNumbertitle = [NSString stringWithFormat:@"Track %d", trackNumber];
     }
     return self;
 }
@@ -83,7 +84,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return trackNumberTitle;
+    return self.trackNumbertitle;
 }
 
 #pragma mark - UITableViewDelegate
