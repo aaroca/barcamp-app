@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	style="@style/linearlayout_padding"
+	android:background="#50377C"
+	android:layout_height="fill_parent">
+
+    <TextView	    
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/title_activity_headquarter"
+		android:textSize="20sp"
+		android:gravity="center"
+		android:textColor="#FFF"
+		android:background="@android:color/transparent"/>
+    
+    <LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:orientation="vertical"
+		android:background="@drawable/customshape">
+			    
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"            
+            android:src="@drawable/ok_icon"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+        
+        <TextView
+            android:id="@+id/author_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida metus ac mauris gravida venenatis."
+            android:textColor="#000"
+            android:textSize="15sp" />
+        
+    </LinearLayout>
+</LinearLayout>

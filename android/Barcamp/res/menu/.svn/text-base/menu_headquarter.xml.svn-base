@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/whereandwhen"
+          android:icon="@drawable/menu_whereandwhen"
+          android:title="@string/menu_item_whereandwhen"/>
+    <item android:id="@+id/register"
+          android:icon="@drawable/menu_register"
+          android:title="@string/menu_item_register"/>
+    <item android:id="@+id/guilties"
+          android:icon="@drawable/menu_guilties"
+          android:title="@string/menu_item_guilties" />
+    <item android:id="@+id/logement"
+          android:icon="@drawable/menu_logement"
+          android:title="@string/menu_item_logement" />
+</menu>

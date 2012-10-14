@@ -1,0 +1,29 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="shortcodes.css" media="screen" />
+</head>
+<body>
+<div class="entry">
+	                	<div>
+<h2 style="text-align: justify;">DONDE</h2>
+<p style="text-align: justify;">En la <strong>Escuela Técnica Superior de Ingeniería Informática</strong> (<strong>ETSII</strong>) de la Universidad de Sevilla. En unas instalaciones completamente equipadas, Wi-Fi gratuito y fácil acceso desde el centro de la ciudad mediante <a title="ETSII" href="http://www.informatica.us.es/index.php/la-escuela/situacion" target="_blank">transporte público</a>.</p>
+</div>
+<div class="woo-sc-box note large rounded full" style="padding-left:15px;background-image:none;">
+<p><strong>Dirección:</strong></p>
+<p>Escuela Técnica Superior de Ingeniería Informática (ETSII)<br />
+Universidad de Sevilla</p>
+<p>Avenida Reina Mercedes S/N<br />
+41012 Sevilla (SPAIN)</p>
+</div>
+<div>
+	<p><a title="Apache Barcamp Spain Location map" href="http://maps.google.com/maps/ms?msid=216901280061729962940.0004a85483ffd20b219d1&amp;msa=0&amp;ll=37.36163,-5.988665&amp;spn=0.033291,0.077162">Mapa con localizacion</a></p>
+</div>
+<div>
+<h2 style="text-align: justify;">CUANDO</h2>
+<p style="text-align: justify;">El <strong>22 de septiembre de 2012</strong>, a partir de las <strong>10:00h </strong>y hasta las <strong>18:00h </strong>¡8 horas de tecnología y diversión!</p>
+<p><a title="Google Calendar" href="https://plus.google.com/u/0/events/c7irusbfotqiijkhlvnkbnjlnqg/111111138115410997833">Añadenos a tu calendario</a></p>
+</div>
+	               	</div><!-- /.entry -->
+	               	</body>
+</html>

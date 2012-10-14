@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    style="@style/tabhost_style">
+    <LinearLayout
+        style="@style/vertical_fill_parent_linearlayout">      
+        <TabWidget
+            android:id="@android:id/tabs"
+            style="@style/tabwidget_style"/>
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            style="@style/fill_parent_layout"/>
+    </LinearLayout>
+</TabHost>

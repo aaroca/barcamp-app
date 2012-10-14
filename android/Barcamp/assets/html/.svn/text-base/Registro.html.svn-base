@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="shortcodes.css" media="screen" />
+</head>
+<body>
+<div class="entry">
+	                	<h1>Registro</h1>
+<p>Compra tu entrada ya en <a href="http://apach.es/afzc">Koliseo</a>.</p>
+<p>Como novedad este año habrán dos tipos de entradas:</p>
+<ul>
+<li>Early bird, para los que compren <strong>antes del 1 de septiembre</strong>, a un precio de <strong>14 euros</strong>.</li>
+<li>Normal, para los que compren <strong>después del 1 de septiembre</strong>, a un precio de <strong>24 euros</strong>.</li>
+</ul>
+<p>Debes darte prisa porque tan solo habrán 130 entradas disponibles.</p>
+<p><strong>¿Por qué este año se cobra la entrada?</strong></p>
+<p>Pues hay varias razones.</p>
+<p>Cuando un evento es gratuito existe la posibilidad de que haya personas que se registran y luego no asisten porque no pierden nada. Esto provoca que personas que sí iban a asistir no lo puedan hacer y que la cantidad de personas en el evento sea menor. Por esta razón hemos pensado cobrar una cantidad simbólica, y así asegurar que puedan asistir el máximo número de personas interesadas.</p>
+<p>Con el pago de las entradas no vamos a recaudar ni la mitad del dinero necesario para organizar el evento. Pero en una época de crisis en la que el número de patrocinadores se ve reducido, podremos hacerlo gracias a la colaboración de todos, por eso te pedimos este pequeño esfuerzo :)</p>
+<p><strong>¿Y si compro mi entrada y al final no puedo ir?</strong></p>
+<p>Es estos casos te permitimos que pases tu entrada a otro amigo o conocido, basta con que nos lo indiques y queda todo arreglado.</p>
+<div>
+</body>
+</html>
